@@ -1,0 +1,77 @@
+@import "~mixins/appColors.module.scss";
+@import "~mixins/generalMixins.module.scss";
+@import "~mixins/mediaQueryManager.scss";
+
+.heading {
+  background-color: $color-blue-4;
+  position: sticky;
+  width: 100%;
+  height: 10.4rem;
+  top: 0;
+  z-index: 100;
+
+  @include respond(tab-port) {
+    padding: 1.5rem 2rem;
+  }
+
+  @include respond(big-phone) {
+    padding: 1.5rem;
+    gap: 1rem;
+  }
+
+  &__wrapper {
+    padding: 0 3.85rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 144rem;
+    height: 100%;
+    margin: auto;
+
+    @include respond(tab-port) {
+      justify-content: flex-end;
+    }
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 3.2rem;
+    line-height: 3rem;
+    color: $color-white-1;
+    margin-left: 4.65rem;
+    font-size: 2.5rem;
+
+    @include respond(tab-port) {
+      display: none;
+    }
+  }
+
+  &__button {
+    border-radius: 4rem;
+    transition: all 0.2s;
+    cursor: pointer;
+
+    &:hover {
+      @include hover;
+    }
+  }
+
+  &__button_txt {
+    font-weight: 700;
+    font-size: 2rem;
+    color: $color-white-1;
+    padding: 2.5rem 4.1rem;
+
+    @include respond(lap) {
+      padding: 2rem 3.5rem;
+    }
+
+    @include respond(big-phone) {
+      padding: 1.5rem 3rem;
+    }
+
+    @include respond(small-phone) {
+      padding: 1rem 2.5rem;
+    }
+  }
+}

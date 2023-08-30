@@ -1,0 +1,43 @@
+@import "~mixins/mediaQueryManager.scss";
+
+.container {
+  max-width: 130rem;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  grid-template-columns: 42rem minmax(20rem, 1fr);
+  padding: 0 3.3rem;
+  margin-top: 1rem;
+
+  &__left {
+    padding: 0 1rem;
+  }
+
+  &__right {
+    padding: 0 1.2rem 0 5.6rem;
+
+    @include respond(tab-port) {
+      padding: 0;
+    }
+  }
+
+  @include respond(tab-port) {
+    display: block;
+    padding: 0 8rem 0 3rem;
+  }
+
+  &__loading {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+
+  button {
+    margin-top: 1rem;
+  }
+
+  pre {
+    margin-bottom: 3rem;
+  }
+
+}

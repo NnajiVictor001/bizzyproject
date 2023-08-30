@@ -1,0 +1,65 @@
+@import "~mixins/appColors.module.scss";
+@import "~mixins/mediaQueryManager.scss";
+
+.header {
+  width: 100%;
+  padding-left: 1rem;
+  padding-right: 7.2rem;
+  height: 5.9rem;
+  background-color: $color-yellow-3;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 0.1rem dashed $color-black-1;
+
+  @include respond(big-phone) {
+    padding: 0;
+  }
+}
+
+.left {
+  cursor: pointer;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+
+  &__btn {
+    padding: 1.4rem 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    color: $color-black-1;
+
+    @include respond(big-phone) {
+      padding: 1.4rem 2rem;
+    }
+  }
+
+  &__btnCont {
+    margin-right: 7.4rem;
+
+    @include respond(small-phone) {
+      margin-right: 2rem;
+    }
+  }
+
+  &__iconsCont {
+    img {
+      width: 4.2rem;
+      height: auto;
+      cursor: pointer;
+      transition: all 0.2s;
+
+      &:hover {
+        transform: translateY(-3px);
+      }
+
+      &:not(:last-child) {
+        margin-right: 1rem;
+      }
+    }
+  }
+}

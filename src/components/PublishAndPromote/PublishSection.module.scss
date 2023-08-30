@@ -1,0 +1,93 @@
+@import '~mixins/appColors.module.scss';
+@import '~mixins/mediaQueryManager.scss';
+
+.main {
+  &__inputContainer {
+    display: flex;
+    margin-top: 2.5rem;
+    width: 100%;
+  }
+  &__inputWidth {
+    width: 100%;
+    position: relative;
+  }
+  &__leftRow {
+    width: 100%;
+  }
+  &__input {
+    border-right: none;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    width: 100%;
+    height: 3.8rem;
+    font-size: 1.6rem;
+  }
+  &__inputPlaceholder {
+    font-size: 1.6rem;
+  }
+  &__inputButton {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: $color-black-1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid $color-gray-6;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    cursor: pointer;
+  }
+  &__inputsMainContainer {
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    @include respond(tab-land) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+  &__publishImage {
+    margin-top: 2.5rem;
+    background-size: contain;
+  }
+  &__btnCont {
+    text-align: right;
+    margin-top: 4rem;
+  }
+  &__title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: $color-black-1;
+    margin-top: 5.3rem;
+  }
+  &__description {
+    font-size: 1.4rem;
+    color: $color-gray-4;
+    margin-top: 3px;
+  }
+  &__btn {
+    padding: 1.4rem 5rem 1.4rem 5rem;
+    font-weight: 700;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    margin-bottom: 1.6rem;
+  }
+  &__open_btn {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: $color-black-1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid $color-gray-6;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    cursor: pointer;
+  }
+}

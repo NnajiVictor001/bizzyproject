@@ -1,0 +1,52 @@
+@import "~mixins/generalMixins.module.scss";
+@import "~mixins/appColors.module.scss";
+@import "~mixins/mediaQueryManager.scss";
+
+.container {
+  padding: 2rem 4rem;
+  max-width: 130rem;
+  margin: 0 auto;
+}
+
+.filter_container {
+  display: grid;
+  grid-template-columns: 16% 16% 16% 25% 1fr;
+  column-gap: 1rem;
+  margin-top: 1rem;
+  align-items: center;
+
+  @include respond(tab-port) {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 2rem;
+  }
+}
+
+.error {
+  text-align: center;
+  color: $color-black-1;
+}
+
+.download_button_container {
+  flex: 1;
+  justify-content: flex-end;
+  display: flex;
+
+  @include respond(tab-port) {
+    justify-content: flex-start;
+  }
+}
+
+.download_button {
+  min-width: 20rem;
+  font-weight: 700;
+  font-size: 1.3rem !important;
+  line-height: 1.6rem;
+  color: #333333;
+}
+
+.flex_center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem 0;
+}

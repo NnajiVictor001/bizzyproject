@@ -1,0 +1,23 @@
+.card {
+  &__iconCont {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 0.6rem;
+    cursor: pointer;
+  }
+
+  &__state {
+    opacity: 0.6;
+    cursor: default;
+    pointer-events: none;
+  }
+
+  &__iconText {
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 1.5rem;
+    margin-left: 3px;
+    white-space: nowrap;
+  }
+}

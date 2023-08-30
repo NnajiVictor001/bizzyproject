@@ -1,0 +1,26 @@
+@import "~mixins/appColors.module.scss";
+@import "~mixins/mediaQueryManager.scss";
+
+.main {
+  padding: 5rem 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 5.2rem;
+  grid-row-gap: 12rem;
+
+  @include respond(tab-port) {
+    padding: 5rem 8rem;
+    grid-template-columns: auto;
+  }
+
+  @include respond(big-phone) {
+    padding: 5rem;
+  }
+}
+
+.placeholder {
+  img {
+    width: 100%;
+    height: auto;
+  }
+}

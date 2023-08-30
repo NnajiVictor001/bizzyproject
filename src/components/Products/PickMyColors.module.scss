@@ -1,0 +1,36 @@
+@import "~mixins/appColors.module.scss";
+
+.container {
+  // padding: 1rem;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  color: $color-gray-4;
+}
+
+.title_con {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.right_con {
+  display: flex;
+  align-items: center;
+
+  img {
+    cursor: pointer;
+  }
+}
+
+.add_colors {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  color: #757575;
+  margin-left: 1rem;
+  cursor: pointer;
+}

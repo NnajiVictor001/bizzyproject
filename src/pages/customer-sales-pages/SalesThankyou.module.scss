@@ -1,0 +1,9 @@
+@import "~mixins/mediaQueryManager.scss";
+
+.main {
+  padding: 6rem 12rem;
+
+  @include respond(big-phone) {
+    padding: 6rem 8rem;
+  }
+}

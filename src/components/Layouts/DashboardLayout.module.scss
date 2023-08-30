@@ -1,0 +1,48 @@
+@import "~mixins/appColors.module.scss";
+
+.layout {
+  &__childrenWrapper {
+    width: 100%;
+  }
+
+  &__content {
+    position: relative;
+    display: flex;
+  }
+
+  &__space {
+    opacity: 0;
+  }
+
+  &__sidebar {
+    position: sticky;
+    top: 5.9rem;
+    margin-top: 0rem;
+  }
+  &__sidebarMt {
+    position: sticky;
+    top: 13.5rem;
+    // margin-top: 7.2rem;
+  }
+
+  &__header {
+    width: 100%;
+    position: sticky;
+    z-index: 100;
+    top: 0rem;
+  }
+
+  &__topBanner {
+    position: sticky;
+    top: 5.9rem;
+    z-index: 100;
+    right: 0;
+    left: 0;
+  }
+}
+
+.flex_center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

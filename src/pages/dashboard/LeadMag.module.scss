@@ -1,0 +1,99 @@
+@import "~mixins/appColors.module.scss";
+
+.heading {
+  padding: 1.5rem 4rem 1.5rem 6rem;
+  background-color: $color-blue-4;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: -6rem;
+
+  &__title {
+    margin-left: 2rem;
+    font-family: "Poppins";
+    font-weight: 500;
+    font-size: 2.5rem;
+    line-height: 3rem;
+    color: $color-white-1;
+  }
+
+  &__button {
+    background: $color-yellow-5;
+    border-radius: 4rem;
+  }
+
+  &__button_txt {
+    font-family: "Poppins";
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 1rem;
+    color: $color-white-1;
+    padding: 1.5rem 3rem;
+  }
+}
+
+.main {
+  width: 100%;
+  padding: 4rem 6rem;
+
+  &__sec_con {
+    display: grid;
+    grid-template-columns: 50% 1fr;
+    grid-gap: 1rem;
+    padding: 8rem 6rem;
+
+    img {
+      width: 100%;
+      padding: 2rem;
+    }
+  }
+
+  &__sec_right {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    &__top {
+      font-family: 'Poppins';
+      font-weight: 600;
+      font-size: 2rem;
+      line-height: 150%;
+      color: $color-black-3;
+    }
+
+    &__middle {
+      font-family: 'Poppins';
+      font-weight: 400;
+      font-size: 1.6rem;
+      line-height: 150%;
+      color: $color-gray-13;
+      margin: 2rem 0 3rem;
+    }
+  }
+
+  &__third_con {
+    padding: 2rem 20rem;
+
+    h1 {
+      font-family: 'Poppins';
+      font-weight: 700;
+      font-size: 6rem;
+      line-height: 140%;
+      text-align: center;
+      color: $color-gray-14;      
+    }
+
+    p {
+      margin-top: 2rem;
+      font-family: 'Poppins';
+      font-weight: 400;
+      font-size: 2rem;
+      line-height: 3rem;
+      text-align: center;
+      letter-spacing: 0.2px;
+      color: $color-gray-13;
+    }
+  }
+}

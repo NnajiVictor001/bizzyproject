@@ -1,0 +1,37 @@
+@import "~mixins/appColors.module.scss";
+
+.container {
+  display: flex;
+  align-items: center;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  color: $color-gray-4;
+  width: 10rem;
+}
+
+.body {
+  display: flex;
+  align-items: center;
+  margin-left: 1rem;
+
+  &__item {
+    width: 3.5rem;
+    height: 3.5rem;
+    background-color: $color-gray-8;
+    border: 1px solid $color-gray-8;
+    border-radius: 1rem;
+    margin-right: 1rem;
+    // border: 2px solid transparent;
+    cursor: pointer;
+  }
+}
+
+.select_item {
+  border: 4px solid #ffdf60;
+  transform: scale(1.25);
+  border-radius: 1.2rem;
+}

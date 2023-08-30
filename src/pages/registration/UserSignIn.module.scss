@@ -1,0 +1,49 @@
+@import "~mixins/generalMixins.module.scss";
+@import "~mixins/appColors.module.scss";
+@import "~mixins/mediaQueryManager.scss";
+
+.container {
+  @include container;
+
+  @include respond(big-phone) {
+    padding: 2rem 8rem;
+  }
+}
+
+.form {
+  margin: 13rem 30rem 1rem 30rem;
+  display: grid;
+  grid-row-gap: 2rem;
+
+  @include respond(tab-land) {
+    margin: 13rem 15rem 1rem;
+  }
+
+  @include respond(tab-port) {
+    margin: 13rem 8rem 1rem;
+  }
+
+  @include respond(big-phone) {
+    margin: 8rem 0 0;
+  }
+
+  &__forget:link,
+  &__forget:visited {
+    display: block;
+    font-family: "Nunito", sans-serif;
+    font-weight: 500;
+    font-size: 1.2rem;
+    color: $color-blue-1;
+    text-align: right;
+    cursor: pointer;
+  }
+
+  &__forget:hover,
+  &__forget:active {
+    color: #053792;
+  }
+
+  &__btn {
+    margin-top: 15rem;
+  }
+}

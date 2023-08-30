@@ -1,0 +1,84 @@
+@import "~mixins/appColors.module.scss";
+@import "~mixins/mediaQueryManager.scss";
+
+.card {
+  &__toggleCont {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 1.3rem;
+  }
+  &__toggle {
+    & span {
+      font-weight: 700;
+      font-size: 1.4rem;
+      line-height: 1.8rem;
+    }
+    & label {
+      width: 2.4rem;
+      height: 8px;
+      margin-left: -4px;
+      margin-right: -4px;
+      & input {
+        &:checked + .right__slider::before {
+          transform: translateX(2.1rem);
+        }
+      }
+    }
+  }
+  &__slider {
+    &::before {
+      bottom: -3.2px;
+      width: 1.6rem;
+      height: 1.6rem;
+      left: -6px;
+    }
+  }
+}
+.main {
+  display: flex;
+  margin-bottom: 0.5rem;
+
+  @include respond(small-phone) {
+    flex-wrap: wrap;
+  }
+
+  &__right {
+    border: 1px solid $color-gray-6;
+    border-radius: 1rem;
+    margin-top: 1.5rem;
+    padding: 1rem;
+    overflow-y: scroll;
+    height: 31rem;
+    margin-bottom: 3rem;
+
+    // @include respond(big-desktop) {
+    //   margin-bottom: 3.5rem;
+    // }
+
+    &::-webkit-scrollbar {
+      width: 8px;
+    }
+    &::-webkit-scrollbar-track {
+      border-radius: 1rem;
+      background: $color-gray-5;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: $color-black-1;
+      border-radius: 1rem;
+      &:hover {
+        background-color: $color-black-2;
+      }
+    }
+  }
+  &__arrowCont {
+    display: flex;
+    justify-content: center;
+  }
+  &__rightText {
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    color: $color-gray-4;
+  }
+}

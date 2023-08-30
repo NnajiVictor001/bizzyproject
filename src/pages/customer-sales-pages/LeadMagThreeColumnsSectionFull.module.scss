@@ -1,0 +1,36 @@
+@import "~mixins/appColors.module.scss";
+@import "~mixins/mediaQueryManager.scss";
+
+.main {
+  padding: 2rem;
+  margin-top: 4rem;
+
+  @include respond(big-phone) {
+    padding: 2rem 3rem;
+    margin-top: 4rem;
+  }
+
+  h3 {
+    font-family: "Poppins";
+    font-weight: 700;
+    font-size: 4.8rem;
+    line-height: 140%;
+    color: $color-gray-15;
+
+    @include respond(big-phone) {
+      font-size: 3rem;
+    }
+  }
+
+  &__columns_con {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    grid-template-columns: repeat(auto-fit, minmax(37rem, 37rem));
+    grid-column-gap: 9.6rem;
+
+    @include respond(big-phone) {
+      flex-direction: column;
+    }
+  }
+}

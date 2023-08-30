@@ -1,0 +1,91 @@
+@import "~mixins/appColors.module.scss";
+
+.input_refresh_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.input {
+  position: relative;
+  width: 100%;
+
+  &__field {
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    border: 1px solid $color-gray-6;
+    border-left: none;
+    padding: 1.4rem;
+    padding-right: 3.5rem;
+    width: 100%;
+    font-weight: 700;
+    font-size: 1.6rem;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:focus + .input__placeholder,
+    &:not(:focus):valid + .input__placeholder {
+      top: -8px;
+      color: $color-black-1;
+      font-size: 1.2rem;
+      font-weight: 500;
+    }
+
+    &__long_con {
+      height: 12rem;
+    }
+
+    &__middle_con {
+      height: 10rem;
+    }
+  }
+
+  .picker_no_border {
+    border-radius: 1rem;
+    border-left: 1px solid $color-gray-6;
+  }
+
+  &__placeholder {
+    color: $color-gray-4;
+    pointer-events: none;
+    position: absolute;
+    top: 25%;
+    left: 5%;
+    background-color: $color-white-1;
+    border-left: 1rem solid $color-white-1;
+    border-right: 1rem solid $color-white-1;
+    transition: all 0.2s ease-in-out;
+  }
+}
+
+.pick_button_container {
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  border: 1px solid $color-gray-6;
+  padding: 1.3rem 1.1rem;
+  cursor: pointer;
+}
+
+.refresh_button_container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1.3rem 1.1rem;
+  cursor: pointer;
+}
+
+.textArea_field {
+  padding: 2.5rem 1.1rem;
+  margin-bottom: 0.5rem;
+
+  &__long_con {
+    padding: 4.9rem 1.1rem;
+  }
+
+  &__middle_con {
+    padding: 3.9rem 1.1rem;
+  }
+}

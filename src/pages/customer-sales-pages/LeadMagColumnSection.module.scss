@@ -1,0 +1,64 @@
+@import "~mixins/appColors.module.scss";
+@import "~mixins/mediaQueryManager.scss";
+
+.main {
+  padding: 1rem;
+
+  @include respond(lap) {
+    padding: 1rem 0;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+
+    &__number {
+      font-weight: 800;
+      font-size: 2rem;
+      line-height: 150%;
+      color: $color-gray-14;
+      background: $color-blue-4;
+      border-radius: 50%;
+      width: 4rem;
+      height: 4rem;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    &__line {
+      flex: 1;
+      opacity: 0.4;
+      border-top: 2px dashed $color-blue-4;
+      margin: 0 3rem 0 2rem;
+    }
+  }
+
+  &__body {
+    padding: 1rem;
+
+    @include respond(lap) {
+      padding: 1rem;
+    }
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 2rem;
+    line-height: 3rem;
+    font-feature-settings: "salt" on, "liga" off;
+    color: $color-gray-14;
+
+    @include respond(tab-land) {
+      font-size: 1.6rem;
+    }
+  }
+
+  &__content {
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 150%;
+    color: $color-gray-13;
+  }
+}

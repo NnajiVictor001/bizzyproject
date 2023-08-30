@@ -1,0 +1,46 @@
+@import "~mixins/appColors.module.scss";
+
+.main {
+  box-shadow: inset 0px -1px 0px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  &__title {
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 2.8rem;
+    letter-spacing: 0.2px;
+    text-transform: capitalize;
+    text-align: left;
+    color: #000000;
+  }
+  &__content {
+    text-align: left;
+    margin-top: 0.4rem;
+    max-height: 0rem;
+    overflow: hidden;
+    transition: max-height 0.8s;
+    padding-left: 1.5rem;
+  }
+  &__contentVisible {
+    text-align: left;
+    margin-top: 0.4rem;
+    max-height: 10rem;
+    overflow: hidden;
+    transition: max-height 0.8s;
+    padding-left: 1.5rem;
+  }
+  &__container {
+    padding: 2rem 2.8rem 2rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    user-select: none;
+  }
+  &__rightIconRotate {
+    transform: rotate(-90deg);
+    transition: all 0.3s;
+  }
+  &__rightIcon {
+    transform: rotate(0deg);
+    transition: all 0.3s;
+  }
+}

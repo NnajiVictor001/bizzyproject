@@ -1,0 +1,13 @@
+@import "~mixins/mediaQueryManager.scss";
+
+.wipeSales {
+  @include respond(big-desktop) {
+    padding: 0 25rem;
+  }
+
+  &__header {
+    position: absolute;
+    right: 0;
+    left: 0;
+  }
+}

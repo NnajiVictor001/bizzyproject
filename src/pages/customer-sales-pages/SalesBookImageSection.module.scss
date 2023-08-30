@@ -1,0 +1,30 @@
+@import "~mixins/mediaQueryManager.scss";
+
+.main {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+  @include respond(tab-land) {
+    justify-content: space-between;
+  }
+
+  &__img {
+    img {
+      width: 100%;
+    }
+
+    @include respond(tab-land) {
+      width: 85%;
+    }
+
+    @include respond(tab-port) {
+      width: 75%;
+    }
+
+    @include respond(big-phone) {
+      width: 65%;
+    }
+  }
+}

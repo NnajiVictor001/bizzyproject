@@ -1,0 +1,48 @@
+@import "~mixins/appColors.module.scss";
+
+.accordion {
+  cursor: pointer;
+  margin: 2rem 0;
+
+  &__title {
+    padding: 1.8rem 2rem;
+    display: flex;
+    align-items: center;
+
+    p {
+      margin-left: 1rem;
+      color: $color-gray-4;
+      font-weight: 700;
+      font-size: 1.6rem;
+      line-height: 2rem;
+    }
+  }
+
+  &__content {
+    background-color: $color-white-1;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    border-top: 1px solid $color-black-1;
+    padding-left: 2rem;
+  }
+
+  &__checkbox {
+    padding-bottom: 2rem;
+  }
+
+  &__checkbox:first-child {
+    padding-top: 1.7rem;
+  }
+}
+
+.inactiveBackground {
+  background: $color-white-1;
+  border: 1px solid $color-gray-6;
+  border-radius: 1rem;
+}
+
+.activeBackground {
+  background: $color-orange-2;
+  border: 1px solid $color-black-1;
+  border-radius: 1rem;
+}

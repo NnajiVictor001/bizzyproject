@@ -1,0 +1,25 @@
+@import "~mixins/appColors.module.scss";
+
+.floatingLabelSelect {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  border-radius: 1rem;
+  border: 1px solid $color-gray-6;
+  padding: 1.4rem;
+}
+
+select {
+  background: $color-white-1;
+  border: none;
+  font-size: 1.6rem;
+  color: $color-gray-4;
+  margin-left: 1rem;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 150ms ease;
+
+  &:focus {
+    outline: none;
+  }
+}

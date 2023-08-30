@@ -1,0 +1,50 @@
+@import "~mixins/appColors.module.scss";
+@import "~mixins/mediaQueryManager.scss";
+
+.passcode {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 2rem;
+  margin: 2rem 40rem 15rem 40rem;
+
+  @include respond(tab-land) {
+    margin: 2rem 30rem 15rem;
+  }
+
+  @include respond(tab-port) {
+    margin: 2rem 20rem 15rem;
+  }
+
+  @include respond(big-phone) {
+    margin: 2rem 5rem 15rem;
+  }
+
+  &__input {
+    border-radius: 1rem;
+    border: 1px solid $color-gray-6;
+    padding: 1.2rem;
+    width: 100%;
+    font-weight: 700;
+    font-size: 1.6rem;
+    text-align: center;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__Btns {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 0 14rem;
+    grid-column-gap: 2rem;
+
+    @include respond(tab-port) {
+      margin: 0 6rem;
+    }
+
+    @include respond(big-phone) {
+      margin: 0;
+    }
+  }
+}

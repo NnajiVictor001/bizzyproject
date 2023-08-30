@@ -1,0 +1,146 @@
+@import "~mixins/mediaQueryManager.scss";
+@import "~mixins/appColors.module.scss";
+
+@font-face {
+  font-family: "Montserrat";
+  src: local("Montserrat"),
+    url(fonts/Montserrat-VariableFont_wght.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: local("Montserrat"), url(fonts/Montserrat-Medium.ttf) format("truetype");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: local("Poppins"), url(fonts/Poppins-Regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: local("Poppins"), url(fonts/Poppins-Medium.ttf) format("truetype");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Roboto Slab";
+  src: local("Roboto Slab"), url(fonts/Roboto-Regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Roboto Slab";
+  src: local("Roboto Slab"), url(fonts/Roboto-Medium.ttf) format("truetype");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Sacramento";
+  src: local("Sacramento"), url(fonts/Sacramento-Regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Lofty Goals";
+  src: local("Lofty Goals"), url(fonts/LoftygoalsRegular.otf) format("opentype");
+}
+
+html {
+  font-size: 62.5%;
+
+  // @include respond(big-desktop) {
+  //   font-size: 75%;
+  // }
+
+  @include respond(tab-land) {
+    font-size: 56.25%;
+  }
+
+  @include respond(tab-port) {
+    font-size: 50%;
+  }
+
+  @include respond(big-phone) {
+    font-size: 43.75%;
+  }
+}
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  box-sizing: border-box;
+  width: 100%;
+  overflow-x: hidden;
+}
+textarea {
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.MuiSlider-root {
+  border-radius: 3.16px !important;
+}
+
+.MuiSlider-rail {
+  color: $color-white-5;
+  height: 0.9rem !important;
+  opacity: 1 !important;
+  padding-right: 4px;
+  z-index: 11;
+}
+
+.MuiSlider-track {
+  color: $color-orange-3;
+  height: 0.9rem !important;
+  z-index: 11;
+}
+
+.MuiSlider-thumb {
+  height: 7rem !important;
+  width: 3.7rem !important;
+  background: url(img/thumb.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: transparent;
+  cursor: pointer;
+  z-index: 19;
+}
+
+.MuiSlider-thumb.Mui-focusVisible,
+.MuiSlider-thumbColorPrimary:hover,
+.MuiSlider-thumb:hover {
+  box-shadow: none !important;
+}
+
+.MuiSlider-thumb::before {
+  content: none !important;
+}
+
+.MuiSlider-mark {
+  width: 1px !important;
+  height: 3.6rem !important;
+  background-color: $color-gray-4 !important;
+}
+
+.MuiSlider-markLabel {
+  margin-left: 1rem;
+}
+
+.ql-editor {
+  padding: 0;
+}
+
+.ql-bubble .ql-tooltip {
+  z-index: 10;
+}
+
+.MuiTooltip-popper {
+  z-index: 9999999 !important;
+}

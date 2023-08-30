@@ -1,0 +1,32 @@
+@import "~mixins/appColors.module.scss";
+@import "~mixins/mediaQueryManager.scss";
+@import "~mixins/generalMixins.module.scss";
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 2rem;
+}
+
+.btn {
+  background: $color-red-3;
+  border-radius: 4rem;
+  transition: all 0.2s;
+  cursor: pointer;
+  margin-top: 3rem;
+  width: fit-content;
+
+  &:hover {
+    @include hover;
+  }
+
+  &__txt {
+    font-family: "Poppins";
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 2rem;
+    color: $color-white-1;
+    padding: 1.5rem 2rem;
+  }
+}

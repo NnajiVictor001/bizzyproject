@@ -1,0 +1,32 @@
+.hue_container {
+  height: 1.2rem;
+  position: relative;
+  margin: 1rem 1.2rem;
+}
+
+.hue_container div:first-of-type {
+  border-radius: 2.43rem;
+}
+
+.saturation_container {
+  width: 100%;
+  height: 13.4rem;
+  position: relative;
+}
+
+.saturation_container div:first-of-type {
+  border-radius: 1rem;
+}
+
+.swatch {
+  margin-left: 0.8rem;
+  padding: 0.5rem;
+  border: 1px solid #DFDFDF;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.edit_container {
+  display: flex;
+  align-items: center;
+}

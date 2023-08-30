@@ -1,0 +1,40 @@
+@import "~mixins/mediaQueryManager.scss";
+
+.form {
+  margin-left: 14rem;
+  margin-right: 14rem;
+
+  @include respond(tab-port) {
+    margin: 0 5rem;
+  }
+
+  @include respond(small-phone) {
+    margin: 0;
+  }
+
+  &__layout {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-column-gap: 2.4rem;
+    grid-row-gap: 2rem;
+  }
+
+  &__leftBtn {
+    grid-row: 6 / 7;
+    grid-column: 1 / 2;
+  }
+
+  &__rightBtn {
+    grid-row: 6 / 7;
+    grid-column: 2 / 3;
+  }
+
+  &__loading {
+    grid-row: 6 / 7;
+    grid-column: 1 / 3;
+  }
+}
+
+.mBottom {
+  margin-bottom: 8rem;
+}

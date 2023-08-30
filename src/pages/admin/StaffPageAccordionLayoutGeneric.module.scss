@@ -1,0 +1,59 @@
+@import "~mixins/generalMixins.module.scss";
+@import "~mixins/appColors.module.scss";
+
+.settings_item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0.4rem;
+  padding: 0.65rem 2rem;
+  cursor: pointer;
+
+  &__con {
+    display: flex;
+    align-items: center;
+
+    label {
+      font-weight: 800;
+      color: $color-black-1;
+    }
+  }
+
+  &__text {
+    font-weight: 800;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    color: $color-black-1;
+    margin-left: 1rem;
+  }
+
+  &__textWhite {
+    font-weight: 800;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    color: $color-white-1;
+    margin-left: 1rem;
+  }
+}
+
+.settings_item:first-child {
+  margin-top: 2rem;
+}
+
+.inactiveBackground {
+  background: linear-gradient(226.15deg, #fbfbfb 7.57%, #f5f5f5 100%);
+  border-radius: 1rem;
+}
+
+.darkBackground {
+  background: $color-black-1;
+  border-radius: 1rem;
+}
+
+.activeBackground {
+  background: $color-orange-2;
+  border: 1px solid $color-black-1;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  padding: 1.7rem 2rem;
+}

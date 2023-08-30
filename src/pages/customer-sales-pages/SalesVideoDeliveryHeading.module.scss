@@ -1,0 +1,43 @@
+@import "~mixins/appColors.module.scss";
+@import "~mixins/mediaQueryManager.scss";
+
+.heading {
+  text-align: center;
+  margin-top: 6rem;
+
+  @include respond(big-phone) {
+    margin-top: 3rem;
+  }
+
+  &__sub_header {
+    font-family: "Poppins";
+    font-weight: 600;
+    font-size: 2.4rem;
+    line-height: 3.6rem;
+    text-align: center;
+    color: $color-gray-13;
+    padding: 0 2rem;
+
+    @include respond(big-phone) {
+      font-size: 2rem;
+    }
+  }
+
+  &__body {
+    font-family: sans-serif;
+    font-weight: 800;
+    font-size: 6rem;
+    line-height: 105%;
+    letter-spacing: -1px;
+    color: $color-blue-2;
+    margin-top: 1rem;
+
+    @include respond(big-phone) {
+      font-size: 3rem;
+    }
+  }
+
+  &__toolkit {
+    color: $color-yellow-1;
+  }
+}

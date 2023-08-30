@@ -1,0 +1,26 @@
+@import "~mixins/generalMixins.module.scss";
+@import "~mixins/appColors.module.scss";
+
+.navButton {
+  cursor: pointer;
+  padding: 1.2rem 1rem;
+  border: 1px solid $color-black-1;
+  border-radius: 1rem;
+  font-weight: 700;
+  font-size: 1.6rem;
+  transition: all 0.2s;
+
+  &:hover {
+    @include hover;
+  }
+}
+
+.innerButton {
+  display: flex;
+  align-items: center;
+
+  p {
+    text-align: center;
+    width: 100%;
+  }
+}

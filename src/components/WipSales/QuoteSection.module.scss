@@ -1,0 +1,50 @@
+@import "~mixins/appColors.module.scss";
+@import "~mixins/mediaQueryManager.scss";
+
+.main {
+  text-align: center;
+  background: $color-yellow-3;
+  padding-top: 7rem;
+  padding-bottom: 9.2rem;
+
+  &::before {
+    content: "\201C";
+    font-size: 15rem;
+    color: $color-yellow-4;
+    line-height: 50%;
+  }
+
+  &__heading {
+    margin-top: -4rem;
+    font-weight: 700;
+    font-size: 5rem;
+    line-height: 120%;
+
+    @include respond(big-phone) {
+      font-size: 3.5rem;
+      line-height: 100%;
+    }
+  }
+  &__authorCont {
+    margin-top: 6.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__detailsCont {
+    text-align: left;
+    padding-left: 2rem;
+  }
+  &__name {
+    font-weight: 700;
+    font-size: 1.8rem;
+    line-height: 2.3rem;
+  }
+  &__position {
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 150%;
+    margin-top: 4px;
+    color: $color-blue-2;
+  }
+}

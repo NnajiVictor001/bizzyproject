@@ -1,0 +1,55 @@
+@import "~mixins/appColors.module.scss";
+@import "~mixins/mediaQueryManager.scss";
+
+.main {
+  padding: 6rem 0;
+  max-width: 144rem;
+  margin: 0 auto;
+
+  @include respond(lap) {
+    padding: 6rem;
+  }
+
+  @include respond(tab-land) {
+    padding: 10rem;
+  }
+
+  @include respond(tab-port) {
+    padding: 4rem 10rem;
+  }
+
+  @include respond(big-phone) {
+    padding: 2rem 3rem;
+  }
+
+  & > div:first-child {
+    margin-top: 0;
+
+    & > div:first-child {
+      color: $color-gray-13;
+    }
+  }
+
+  &__order {
+    margin: 12rem 0;
+
+    @include respond(big-phone) {
+      margin-top: 5rem;
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__images {
+    margin-bottom: 18.5rem;
+
+    @include respond(big-phone) {
+      margin-bottom: 8rem;
+    }
+  }
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

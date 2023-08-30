@@ -1,0 +1,43 @@
+@import "~mixins/appColors.module.scss";
+@import "~mixins/mediaQueryManager.scss";
+
+.main {
+  display: flex;
+  align-items: flex-start;
+
+  @include respond(tab-port) {
+    margin: 4rem 0;
+  }
+
+  img {
+    width: 4.9rem;
+  }
+
+  &__body {
+    margin-left: 2.4rem;
+    max-width: inherit;
+
+    h3 {
+      font-weight: 600;
+      font-size: 1.4rem;
+      line-height: 150%;
+      // color: $color-black-3;
+
+      @include respond(tab-land) {
+        font-size: 1.6rem;
+      }
+    }
+
+    p {
+      margin-top: 1rem;
+      font-weight: 400;
+      font-size: 1.1rem;
+      line-height: 150%;
+      color: $color-gray-13;
+
+      @include respond(tab-land) {
+        font-size: 1.2rem;
+      }
+    }
+  }
+}

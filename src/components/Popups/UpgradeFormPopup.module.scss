@@ -1,0 +1,228 @@
+@import "~mixins/appColors.module.scss";
+@import "~mixins/mediaQueryManager.scss";
+
+.upPopup {
+  background-color: $color-gray-2;
+  padding: 0 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+
+  @include respond(small-phone) {
+    justify-content: center;
+  }
+
+  &__left {
+    flex: 0 0 35%;
+    padding: 2rem;
+
+    @include respond(big-phone) {
+      flex: auto;
+    }
+  }
+
+  &__heading {
+    font-weight: 700;
+    font-size: 2.3rem;
+    line-height: 2.9rem;
+    color: $color-black-1;
+  }
+
+  &__details {
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    color: $color-gray-3;
+    margin-top: 1rem;
+  }
+
+  &__listItem {
+    margin-top: 2.5rem;
+  }
+
+  & li {
+    list-style: none;
+  }
+
+  &__liHeading {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    color: $color-black-1;
+  }
+
+  &__liIcon {
+    margin-right: 1rem;
+  }
+
+  &__liText {
+    margin-left: 3rem;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+
+    color: $color-gray-3;
+  }
+}
+.right {
+  background-color: $color-white-1;
+  flex: 0 0 65%;
+  border: 1px solid $color-gray-6;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 1rem;
+  padding: 1rem 2rem;
+  display: flex;
+  flex-wrap: wrap;
+
+  @include respond(big-phone) {
+    flex: auto;
+  }
+
+  &__selectPlan {
+    margin-top: 1rem;
+  }
+
+  &__selectPlanCont {
+    padding: 5px 2rem;
+    & div {
+      align-items: baseline;
+    }
+    & h1 {
+      font-weight: 700;
+      font-size: 1.2rem;
+      line-height: 2.8rem;
+      color: $color-gray-1;
+      margin-bottom: 0;
+    }
+    & span {
+      font-weight: 700;
+      font-size: 9px;
+      line-height: 1.2rem;
+      text-decoration-line: underline;
+      color: $color-orange-1;
+      cursor: pointer;
+    }
+    & h2 {
+      font-weight: 700;
+      font-size: 1.8rem;
+      line-height: 2.3rem;
+      color: $color-black-1;
+      margin-bottom: 0;
+    }
+    & p {
+      font-weight: 500;
+      font-size: 9px;
+      line-height: 1.2rem;
+      margin-top: 1rem;
+      color: #414141;
+    }
+  }
+
+  &__toggleCont {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+    column-gap: 1.6rem;
+  }
+  &__toggle {
+    & span {
+      font-weight: 700;
+      font-size: 1.2rem;
+    }
+    & label {
+      width: 3.2rem;
+      height: 8px;
+      margin-left: -4px;
+      margin-right: -4px;
+      & input {
+        &:checked + .right__slider::before {
+          transform: translateX(1.8rem);
+        }
+      }
+    }
+  }
+  &__slider {
+    &::before {
+      bottom: -3px;
+    }
+  }
+  &__divider {
+    margin: 1rem 1rem;
+    border-top: 1px solid $color-gray-6;
+  }
+
+  &__billHeading {
+    font-weight: 700;
+    font-size: 1.2rem;
+    line-height: 28px;
+    color: $color-black-1;
+
+    @include respond(tab-port) {
+      margin-top: 1rem;
+    }
+  }
+
+  &__input {
+    padding: 8px 9px 9px 6px;
+    font-weight: 500;
+    font-size: 9px;
+    line-height: 11px;
+    margin-top: 1rem;
+    border-radius: 5px;
+    width: 100%;
+    &:focus + .right__placeHolder,
+    &:not(:focus):valid + .right__placeHolder {
+      top: 3px;
+      color: $color-black-1;
+      font-size: 1rem;
+      font-weight: 500;
+    }
+  }
+  &__placeHolder {
+    font-size: 9px;
+    top: 50%;
+    left: 6.5px;
+  }
+  &__inputCont {
+    display: flex;
+    column-gap: 1.2rem;
+    & div {
+      width: 100%;
+    }
+  }
+
+  &__btn {
+    padding: 1rem 7.2rem;
+  }
+
+  &__btnCont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+
+  &__lastLine {
+    font-weight: 400;
+    font-size: 9px;
+    margin-top: 1rem;
+    text-align: center;
+
+    color: $color-gray-7;
+  }
+
+  @include respond(small-phone) {
+    margin-top: 2rem;
+  }
+}
+
+.billing {
+  flex: 1;
+}
+
+.plan {
+  width: 100%;
+}

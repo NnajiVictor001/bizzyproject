@@ -1,0 +1,21 @@
+@import "~mixins/appColors.module.scss";
+
+.main {
+  display: flex;
+  cursor: pointer;
+
+  & :last-child {
+    border-radius: 0px 1rem 1rem 0px;
+  }
+  & :first-child {
+    border-radius: 1rem 0px 0px 1rem;
+  }
+  & div {
+    width: 3.3rem;
+    height: 2.9rem;
+  }
+
+  &__selected {
+    border: 2px solid $color-black-2;
+  }
+}

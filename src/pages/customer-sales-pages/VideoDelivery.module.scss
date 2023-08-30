@@ -1,0 +1,10 @@
+@import "~mixins/appColors.module.scss";
+@import "~mixins/mediaQueryManager.scss";
+
+.main {
+  padding: 0rem 6rem;
+
+  @include respond(big-phone) {
+    padding: 2rem 3rem;
+  }
+}

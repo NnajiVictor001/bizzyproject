@@ -1,0 +1,93 @@
+@import "~mixins/generalMixins.module.scss";
+@import "~mixins/appColors.module.scss";
+@import "~mixins/mediaQueryManager.scss";
+
+.container {
+  padding: 3.3rem 1rem 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 138.6rem;
+  margin-left: auto;
+  margin-right: auto;
+
+  .left_con {
+    flex: 2.84;
+    margin: 0 3.4rem;
+
+    @include respond(big-phone) {
+      flex: 1;
+    }
+
+    .header_description {
+      font-weight: 400;
+      font-size: 1.6rem;
+      color: $color-gray-4;
+      margin-top: 1rem;
+    }
+
+    .top_section {
+      margin: 2rem 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 2rem;
+
+      &__con {
+        flex: 0 0 30%;
+
+        @include respond(big-phone) {
+          flex: 1;
+        }
+      }
+    }
+
+    .content_title {
+      margin: 4rem 0;
+      font-weight: 700;
+      font-size: 1.6rem;
+      line-height: 2rem;
+      color: $color-black-1;
+    }
+
+    .batches_con {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(20.9rem, 20.9rem));
+      grid-column-gap: 2.5rem;
+      grid-row-gap: 2rem;
+      overflow-y: auto;
+      padding-right: 2rem;
+      padding-bottom: 2rem;
+    }
+
+    .btmBtnCon {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 4rem;
+    }
+  }
+
+  .right_con {
+    flex: 1;
+  }
+}
+
+.flex_center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scrollbar {
+  &::-webkit-scrollbar {
+    width: 9px;
+  }
+  &::-webkit-scrollbar-track {
+    border-radius: 1rem;
+    background-color: #f0efef;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.25);
+    border-radius: 1rem;
+  }
+}

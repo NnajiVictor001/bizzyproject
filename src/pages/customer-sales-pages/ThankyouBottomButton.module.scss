@@ -1,0 +1,84 @@
+@import "~mixins/appColors.module.scss";
+@import "~mixins/mediaQueryManager.scss";
+@import "~mixins/generalMixins.module.scss";
+
+.main {
+  padding: 6rem 15.5rem 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include respond(tab-port) {
+    padding: 5rem 8rem;
+  }
+
+  @include respond(big-phone) {
+    padding: 1rem 5rem;
+  }
+
+  h1 {
+    font-weight: 700;
+    font-size: 4.8rem;
+    line-height: 140%;
+    text-align: center;
+    // color: #111827;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+
+    @include respond(tab-port) {
+      font-size: 4rem;
+    }
+
+    @include respond(big-phone) {
+      font-size: 1.8rem;
+      margin-top: 1rem;
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__top_txt {
+    font-weight: 400;
+    font-size: 2.4rem;
+    line-height: 2.9rem;
+    text-align: center;
+    letter-spacing: 0.2px;
+    // color: #6d7280;
+    margin-bottom: 2.5rem;
+
+    @include respond(tab-port) {
+      font-size: 2rem;
+    }
+
+    @include respond(big-phone) {
+      font-size: 1.2rem;
+    }
+  }
+
+  &__button {
+    background: $color-red-3;
+    border-radius: 4rem;
+    transition: all 0.2s;
+    cursor: pointer;
+    width: fit-content;
+
+    @include respond(big-phone) {
+      padding: 1rem 1.5rem;
+    }
+
+    &:hover {
+      @include hover;
+    }
+  }
+
+  &__button_txt {
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 1rem;
+    color: $color-white-1;
+    padding: 2.4rem 4rem;
+
+    @include respond(big-phone) {
+      padding: 1rem 1.5rem;
+    }
+  }
+}

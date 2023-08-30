@@ -1,0 +1,41 @@
+@import "~mixins/appColors.module.scss";
+@import "~mixins/mediaQueryManager.scss";
+
+.main {
+  padding: 2rem;
+  margin-top: 3rem;
+
+  img {
+    width: 100%;
+  }
+
+  @include respond(lap) {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  // @include respond(big-phone) {
+  //   padding: 2rem 3rem;
+  // }
+
+  h3 {
+    font-weight: 700;
+    font-size: 4.8rem;
+    line-height: 140%;
+    color: $color-gray-14;
+    margin-top: 5rem;
+
+    @include respond(big-phone) {
+      font-size: 3rem;
+    }
+  }
+
+  p {
+    font-weight: 400;
+    font-size: 2rem;
+    letter-spacing: 0.2px;
+    color: $color-gray-13;
+    margin-top: 1rem;
+    line-height: 130%;
+  }
+}

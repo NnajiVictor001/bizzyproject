@@ -1,0 +1,50 @@
+@import "~mixins/appColors.module.scss";
+@import "~mixins/mediaQueryManager.scss";
+
+.main {
+  width: 100%;
+  padding-bottom: 1rem;
+  margin-top: 1rem;
+
+  .image_con {
+    @include respond(tab-port) {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+    }
+    img {
+      width: 70%;
+      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+      @include respond(big-desktop) {
+        width: 100%;
+      }
+      @include respond(tab-port) {
+        width: 40%;
+      }
+    }
+  }
+
+  .check_con {
+    display: flex;
+    align-items: center;
+    margin: 2rem 0;
+
+    &__refresh {
+      margin-left: 2rem;
+      cursor: pointer;
+    }
+  }
+
+  .add_video_con {
+    margin: 1rem 0;
+    text-align: right;
+  }
+
+  .content_txt {
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    color: $color-black-1;
+  }
+}

@@ -1,0 +1,23 @@
+@import "~mixins/appColors.module.scss";
+@import "~mixins/mediaQueryManager.scss";
+
+.main {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  &__check_txt {
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 150%;
+    // color: $color-black-1;
+
+    // @include respond(tab-land) {
+    //   font-size: 1.2rem;
+    // }
+
+    // @include respond(small-phone) {
+    //   font-size: 1.4rem;
+    // }
+  }
+}

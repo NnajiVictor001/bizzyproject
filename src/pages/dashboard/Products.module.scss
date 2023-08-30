@@ -1,0 +1,13 @@
+@import "~mixins/mediaQueryManager.scss";
+
+.products {
+  padding-right: 8rem;
+  padding-left: 8rem;
+  text-align: center;
+  max-width: 130rem;
+  margin: 0 auto;
+
+  @include respond(big-phone) {
+    width: 90vw;
+  }
+}

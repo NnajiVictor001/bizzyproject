@@ -1,0 +1,21 @@
+@import "~mixins/generalMixins.module.scss";
+@import "~mixins/appColors.module.scss";
+
+.settings_default_item {
+  display: flex;
+  align-items: center;
+  margin-top: 0.4rem;
+  padding: 0.9rem 1.4rem;
+  cursor: pointer;
+  background-color: $color-black-1;
+  border-radius: 1rem;
+  margin-bottom: 8.8rem;
+
+  &__text {
+    font-weight: 800;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    color: $color-white-1;
+    margin-left: 1rem;
+  }
+}

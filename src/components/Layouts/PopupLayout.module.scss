@@ -1,0 +1,39 @@
+@import "~mixins/appColors.module.scss";
+@import "~mixins/mediaQueryManager.scss";
+
+.layout {
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  z-index: 200;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &__children {
+    position: relative;
+    filter: drop-shadow(0px 6.2rem 6.2rem rgba(0, 0, 0, 0.25));
+    border: 2px solid $color-black-1;
+    border-radius: 2.4rem;
+    display: flex;
+    align-items: center;
+    padding: 1rem 2rem;
+  }
+
+  &__close {
+    position: absolute;
+    right: 1.8rem;
+    top: 1.6rem;
+    cursor: pointer;
+    transition: all 0.2s;
+
+    &:hover {
+      transform: translateY(-3px);
+    }
+
+    @include respond(small-phone) {
+      right: 5rem;
+    }
+  }
+}

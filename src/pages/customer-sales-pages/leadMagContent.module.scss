@@ -1,0 +1,15 @@
+@import "~mixins/mediaQueryManager.scss";
+
+.margin {
+  max-width: 116rem;
+  margin: 0 auto;
+  // margin-top: 16.4rem;
+
+  // @include respond(big-phone) {
+  //   margin-top: 6rem;
+  // }
+
+  &__faq {
+    margin-top: 1rem;
+  }
+}

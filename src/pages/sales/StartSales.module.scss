@@ -1,0 +1,58 @@
+@import "~mixins/generalMixins.module.scss";
+@import "~mixins/appColors.module.scss";
+@import "~mixins/mediaQueryManager.scss";
+
+.container {
+  @include container;
+
+  @include respond(big-phone) {
+    padding: 2rem 3rem;
+  }
+}
+
+.cardsAppearance {
+  display: flex;
+  margin-top: 4rem;
+  column-gap: 2rem;
+  row-gap: 2rem;
+}
+
+.bottomContainer {
+  margin-top: 10rem;
+  text-align: center;
+
+  button {
+    cursor: pointer;
+    padding: 1.4rem 7rem;
+    border: 1px solid $color-black-1;
+    border-radius: 1rem;
+    font-weight: 700;
+    font-size: 1.6rem;
+    transition: all 0.2s;
+    background-color: $color-orange-1;
+
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+    }
+
+    p {
+      color: $color-black-1;
+      font-weight: 700;
+      font-size: 1.6rem;
+      margin-top: 0;
+      margin-left: 1rem;
+    }
+  }
+
+  .bottomBtnCon {
+    display: flex;
+    align-items: center;
+  }
+
+  p {
+    font-weight: 400;
+    margin-top: 2rem;
+    color: $color-gray-4;
+  }
+}

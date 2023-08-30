@@ -1,0 +1,56 @@
+@import "~mixins/mediaQueryManager.scss";
+
+.getStart {
+  display: grid;
+  grid-template-columns: minmax(27rem, 28rem) 1fr minmax(27rem, 28rem) 1fr minmax(
+      27rem,
+      28rem
+    );
+  position: relative;
+  margin-top: 2.2rem;
+  padding: 0 4.5rem;
+
+  @include respond(big-phone) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 2rem;
+  }
+
+  &__card1Body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem 1rem;
+
+    @include respond(tab-port) {
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  &__card3Body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+
+    @include respond(tab-port) {
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  &__bgLine {
+    align-self: center;
+
+    @include respond(big-phone) {
+      display: none;
+    }
+  }
+
+  &__bgFullImage {
+    width: 100%;
+  }
+}

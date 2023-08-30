@@ -1,0 +1,40 @@
+@import "~mixins/appColors.module.scss";
+@import "~mixins/mediaQueryManager.scss";
+
+.sidebar {
+  padding-bottom: 2.3rem;
+  height: 100%;
+  min-height: 78.8rem;
+  background-color: $color-orange-2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 18.2rem;
+
+  @include respond(tab-port) {
+    width: 5.4rem;
+    em,
+    aside {
+      display: none;
+    }
+  }
+  & li {
+    list-style: none;
+    margin-top: 1.2rem;
+  }
+
+  &__icon:first-child {
+    margin-top: 0.7rem;
+  }
+}
+
+.top {
+  margin-top: 2rem;
+
+  @include respond(big-phone) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}

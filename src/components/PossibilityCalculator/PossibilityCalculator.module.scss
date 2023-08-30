@@ -1,0 +1,239 @@
+@import "~mixins/appColors.module.scss";
+@import "~mixins/mediaQueryManager.scss";
+
+.main {
+  background-color: $color-orange-2;
+  border-radius: 2.6rem;
+  box-shadow: 0rem 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
+  padding: 1rem;
+  margin: 3.2rem 1rem 0 0.1rem;
+
+  &__box {
+    background-color: $color-white-1;
+    border-radius: 2.6rem;
+    border: 1px solid $color-white-2;
+    box-shadow: 0rem 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 5rem 5.7rem 4rem 4.7rem;
+
+    @include respond(big-phone) {
+      padding: 2rem 2rem 4rem;
+    }
+  }
+
+  &__boxLeft {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    padding-right: 2rem;
+    flex: 0 0 38%;
+
+    @include respond(tab-land) {
+      padding-right: 2rem;
+    }
+
+    @include respond(tab-port) {
+      flex: 0 0 30%;
+    }
+
+    @include respond(small-phone) {
+      flex: 1;
+      margin-bottom: 3rem;
+      row-gap: 1.5rem;
+    }
+  }
+
+  &__boxLeftBg {
+    position: absolute;
+    left: 4rem;
+    top: -2.5rem;
+    width: 24.1rem;
+
+    @include respond(small-phone) {
+      display: none;
+    }
+  }
+
+  &__boxLeftRow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 2;
+    width: 24.7rem;
+
+    @include respond(tab-land) {
+      width: 22.7rem;
+    }
+
+    @include respond(big-phone) {
+      width: 20.7rem;
+    }
+
+    @include respond(small-phone) {
+      width: auto;
+    }
+  }
+
+  &__boxLeftInput {
+    width: 11.2rem;
+    box-shadow: inset 0rem 0.3rem 0.3rem $color-gray-6;
+    border: 1px solid $color-gray-6;
+    border-radius: 0.6rem;
+    background-color: $color-white-1;
+    text-align: right;
+    padding-right: 1.5rem;
+    font-family: "Plus Jakarta Sans";
+    font-weight: 800;
+    font-size: 2.7rem;
+    line-height: 3.5rem;
+
+    &:focus {
+      outline: none;
+    }
+
+    &::-webkit-inner-spin-button,
+    ::-webkit-outer-spin-button {
+      margin: 0;
+      -webkit-appearance: none;
+    }
+
+    @include respond(tab-land) {
+      width: 8.2rem;
+    }
+  }
+
+  &__boxLeftText {
+    font-weight: 700;
+    font-size: 1.7rem;
+    line-height: 2.1rem;
+    color: $color-black-2;
+  }
+
+  &__toggleCont {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 1rem;
+    column-gap: 1.6rem;
+    position: absolute;
+    bottom: -5px;
+  }
+
+  &__toggle {
+    & span {
+      font-weight: 700;
+      font-size: 0.9rem;
+    }
+
+    & label {
+      width: 2rem;
+      height: 5px;
+      margin-left: -14px;
+      margin-right: -14px;
+
+      & input {
+        &:checked + .main__slider::before {
+          transform: translateX(1.3rem);
+        }
+      }
+    }
+  }
+
+  &__slider {
+    &::before {
+      bottom: -0.8px;
+      left: 0px;
+      width: 7px;
+      height: 7px;
+      box-shadow: 0px 0.867829px 3.47132px rgba(0, 0, 0, 0.24);
+    }
+  }
+
+  &__boxRight {
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    flex: 1;
+  }
+
+  &__boxRightRow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__boxRightRow2 {
+    margin-top: 5.1rem;
+  }
+
+  &__boxRightHeadingCont {
+    display: flex;
+  }
+
+  &__boxRightHeading {
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 2.6rem;
+    text-transform: capitalize;
+
+    @include respond(small-phone) {
+      font-size: 1.6rem;
+    }
+  }
+
+  &__boxRightSelect {
+    margin-left: 1rem;
+    width: 9.7rem;
+  }
+
+  &__boxRightDetails {
+    text-align: left;
+    font-weight: 600;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    margin-top: 0.8rem;
+    color: $color-black-2;
+  }
+
+  &__boxRightRight {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__boxRightValue {
+    border-radius: 1.5rem;
+    border: 0.1rem solid $color-black-1;
+    margin-left: 1rem;
+    box-shadow: 0rem 0.6rem 0.6rem rgba($color: $color-yellow-4, $alpha: 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & p {
+      padding: 1rem 2rem;
+      font-weight: 800;
+      font-size: 3.2rem;
+      line-height: 4rem;
+
+      @include respond(big-phone) {
+        padding: 1rem;
+        font-size: 2.2rem;
+      }
+    }
+  }
+
+  &__boxRightLabel {
+    font-weight: 600;
+    font-size: 0.9rem;
+    line-height: 1.1rem;
+    margin-top: 0.3rem;
+    color: $color-black-2;
+    margin-left: 2.2rem;
+  }
+}

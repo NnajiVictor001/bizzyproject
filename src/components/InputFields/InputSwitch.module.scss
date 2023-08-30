@@ -1,0 +1,42 @@
+@import "~mixins/appColors.module.scss";
+
+.react_switch_checkbox {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+.react_switch_label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  width: 6rem;
+  height: 2rem;
+  background: $color-orange-1;
+  border-radius: 10rem;
+  position: relative;
+  transition: background-color 0.2s;
+}
+
+.react_switch_label .react_switch_button {
+  content: "";
+  position: absolute;
+  top: -0.6rem;
+  left: 0px;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 3rem;
+  // transition: 0.1s;
+  background: $color-white-1;
+  box-shadow: 0px 2px 8px rgb(0 0 0 / 24%);
+}
+
+.react_switch_checkbox:checked+.react_switch_label .react_switch_button {
+  left: 100%;
+  transform: translateX(-100%);
+}
+
+.react_switch_label:active .react_switch_button {
+  width: 60px;
+}

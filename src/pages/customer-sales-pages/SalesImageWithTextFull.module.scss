@@ -1,0 +1,61 @@
+@import "~mixins/appColors.module.scss";
+@import "~mixins/mediaQueryManager.scss";
+
+.main {
+  width: 100%;
+  font-family: inherit;
+
+  &__con {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+    grid-gap: 1rem;
+    margin-top: 12rem;
+
+    @include respond(lap) {
+      margin-left: 1rem;
+      margin-right: 1rem;
+    }
+
+    @include respond(tab-port) {
+      flex-wrap: wrap;
+      flex-direction: column-reverse !important;
+      margin-top: 6rem;
+    }
+
+    @include respond(big-phone) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 4rem;
+      margin-right: 0;
+    }
+  }
+
+  &__left {
+    padding: 2rem;
+    // max-width: 44rem;
+
+    &__top {
+      font-weight: 600;
+      font-size: 2rem;
+      line-height: 150%;
+      // color: $color-black-3;
+    }
+
+    &__middle {
+      font-weight: 400;
+      font-size: 2rem;
+      line-height: 150%;
+      // color: $color-gray-13;
+      margin: 2rem 0 3rem;
+
+      @include respond(big-phone) {
+        margin: 2rem 0 0;
+      }
+
+      @include respond(small-phone) {
+        line-height: 120%;
+      }
+    }
+  }
+}

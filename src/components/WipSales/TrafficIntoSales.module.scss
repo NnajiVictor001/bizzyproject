@@ -1,0 +1,31 @@
+@import "~mixins/appColors.module.scss";
+
+.main {
+  padding: 7rem 0rem;
+  text-align: center;
+  &__text {
+    font-weight: 700;
+    font-size: 1.8rem;
+    line-height: 2.3rem;
+    text-align: center;
+  }
+  &__heading {
+    font-weight: 800;
+    font-size: 5rem;
+    line-height: 120%;
+    text-align: center;
+    margin-top: 2.8rem;
+  }
+  &__btn {
+    margin-top: 5.4rem;
+    padding: 1.6rem 3.6rem 1.5rem;
+    border-radius: 8px;
+    & a {
+      font-weight: 400;
+      font-size: 1.8rem;
+      line-height: 150%;
+      color: $color-white-1;
+      text-decoration: none;
+    }
+  }
+}

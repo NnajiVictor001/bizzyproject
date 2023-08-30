@@ -1,0 +1,134 @@
+@import "~mixins/appColors.module.scss";
+@import "~mixins/generalMixins.module.scss";
+@import "~mixins/mediaQueryManager.scss";
+
+.popup {
+  background-color: rgba(0, 0, 0, 0.2);
+  width: 100%;
+  height: 100vh;
+  z-index: 2000;
+  top: 0;
+  left: 0;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(5px);
+
+  &__content {
+    width: 70%;
+    background: $color-white-1;
+    color: $color-white-1;
+    z-index: 10;
+    border-radius: 1.6rem;
+    box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.04);
+    overflow: auto;
+    padding: 2rem;
+
+    @include respond(tab-land) {
+      width: 90%;
+    }
+
+    @include respond(big-phone) {
+      padding: 4rem 2rem;
+    }
+
+    &__header {
+      background: $color-white-1;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .header_title {
+        font-weight: 700;
+        font-size: 1.6rem;
+        line-height: 2rem;
+        color: $color-black-1;
+        margin-left: 3rem;
+      }
+
+      &__closeBtn {
+        cursor: pointer;
+        font-weight: 500;
+        padding: 4px 8px;
+        border-radius: 8px;
+        border: none;
+        font-size: 1.8rem;
+        color: #2c3e50;
+        background: $color-white-1;
+        transition: all 0.25s ease;
+      }
+
+      &__closeBtn:hover {
+        @include hover;
+      }
+    }
+
+    .body {
+      &__image {
+        text-align: center;
+        padding-bottom: 1rem;
+
+        img {
+          border: 1px solid $color-gray-4;
+          filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+          width: 30rem;
+
+          @include respond(big-desktop) {
+            width: 40rem;
+          }
+        }
+      }
+
+      &__title {
+        text-align: center;
+        margin-bottom: 1.5rem;
+
+        @include respond(big-desktop) {
+          margin-bottom: 3rem;
+        }
+
+        @include respond(big-phone) {
+          margin-bottom: 3rem;
+        }
+
+        &__txt {
+          font-weight: 800;
+          font-size: 3rem;
+          line-height: 3.8rem;
+          color: $color-black-1;
+        }
+      }
+
+      &__content {
+        text-align: center;
+        margin-bottom: 1.5rem;
+
+        @include respond(big-desktop) {
+          margin-bottom: 3rem;
+        }
+
+        @include respond(big-phone) {
+          margin-bottom: 3rem;
+        }
+
+        &__txt {
+          font-family: "Nunito";
+          font-weight: 700;
+          font-size: 1.6rem;
+          line-height: 2.2rem;
+          color: $color-black-1;
+        }
+
+        .download_link {
+          color: $color-blue-1;
+          text-decoration: underline;
+        }
+      }
+
+      .bottom_con {
+        text-align: center;
+      }
+    }
+  }
+}

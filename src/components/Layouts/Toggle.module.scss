@@ -1,0 +1,68 @@
+@import "~mixins/appColors.module.scss";
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.toggler {
+  position: relative;
+  display: inline-block;
+  width: 4rem;
+  height: 1.4rem;
+
+  &__input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+
+    &:checked + .toggler__slider::before {
+      transform: translateX(2.6rem);
+    }
+  }
+
+  &__slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 3.4rem;
+    background-color: $color-yellow-1;
+
+    &::before {
+      position: absolute;
+      content: "";
+      height: 1.6rem;
+      width: 1.6rem;
+      bottom: -1px;
+      border-radius: 50%;
+      background-color: $color-white-1;
+      box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.24);
+      transition: all 0.3s;
+    }
+  }
+}
+
+.leftLabel {
+  margin-right: 2rem;
+  cursor: pointer;
+}
+
+.rightLabel {
+  margin-left: 2rem;
+  cursor: pointer;
+}
+
+.activeLabel {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: $color-black-1;
+}
+
+.inactiveLabel {
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: $color-gray-1;
+}

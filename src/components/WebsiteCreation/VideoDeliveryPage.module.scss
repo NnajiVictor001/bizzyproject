@@ -1,0 +1,66 @@
+@import "~mixins/appColors.module.scss";
+.main {
+  &__colorInputS {
+    margin: 2.8rem 0;
+
+    & input {
+      font-family: "Plus Jakarta Sans", sans-serif;
+      font-weight: 400;
+      line-height: 1.8rem;
+      font-size: 1.4rem;
+    }
+
+    & textarea {
+      font-family: "Plus Jakarta Sans", sans-serif;
+      font-weight: 400;
+      line-height: 1.8rem;
+      font-size: 1.4rem;
+    }
+  }
+  &__divider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.7rem;
+  }
+  &__dividerText {
+    font-size: 1.2rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  &__dividerLine {
+    width: 38%;
+    height: 1px;
+    background-color: $color-gray-6;
+  }
+  &__simpleInputPlaceholder {
+    font-size: 1.4rem;
+  }
+  &__checkbox {
+    margin-top: 8.2rem;
+
+    &__label {
+      font-size: 1.4rem;
+      line-height: 1.8rem;
+      font-weight: 800;
+      font-family: "Plus Jakarta Sans", sans-serif;
+    }
+  }
+}
+
+.warning {
+  position: relative;
+  &::after {
+    position: absolute;
+    content: "This input can not be empty";
+    display: inline-block;
+    color: $color-red-3;
+    font-size: 1.2rem;
+  }
+  input {
+    border: 1px solid $color-red-3 !important;
+  }
+  textarea {
+    border: 1px solid $color-red-3 !important;
+  }
+}

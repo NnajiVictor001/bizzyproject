@@ -1,0 +1,100 @@
+@import "~mixins/appColors.module.scss";
+@import "~mixins/mediaQueryManager.scss";
+
+.main {
+  padding: 1.5rem 3.6rem;
+  position: relative;
+}
+
+.container {
+  margin: 0 auto;
+
+  .carousel_con {
+    overflow: hidden;
+
+    .body_con {
+      scroll-behavior: smooth;
+      overflow: hidden;
+      gap: 1rem;
+      display: flex;
+      z-index: 0;
+      align-items: center;
+
+      &__item {
+        text-align: center;
+        position: relative;
+        cursor: pointer;
+
+        &__out {
+          width: 13.3rem;
+          transition: all 0.2s;
+          border: 3px solid transparent;
+          filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        }
+
+        .complete_image {
+          position: absolute;
+          left: 0;
+          right: 0;
+          bottom: 1.8rem;
+
+          @include respond(tab-port) {
+            top: 4rem;
+          }
+
+          @include respond(big-phone) {
+            top: 3rem;
+          }
+
+          img {
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+            width: 8.2rem;
+            height: auto;
+
+            @include respond(big-phone) {
+              width: 60%;
+            }
+          }
+        }
+
+        .select_chip {
+          border: 3px solid $color-orange-2 !important;
+        }
+      }
+    }
+  }
+}
+
+.arrow_left_btn {
+  width: 1.8rem;
+  z-index: 10;
+  cursor: pointer;
+  position: absolute;
+  left: 0.9rem;
+  top: 0;
+  bottom: 0;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  border: none;
+}
+
+.arrow_right_btn {
+  width: 1.8rem;
+  z-index: 10;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0.9rem;
+  bottom: 0;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  border: none;
+}
+
+.arrow_img {
+  width: 4rem;
+  height: 4rem;
+  margin-left: -1rem;
+}

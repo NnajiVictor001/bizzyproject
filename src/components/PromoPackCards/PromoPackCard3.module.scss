@@ -1,0 +1,88 @@
+@import "~mixins/appColors.module.scss";
+@import "~mixins/mediaQueryManager.scss";
+
+.card {
+  &__main {
+    display: flex;
+  }
+}
+
+.left {
+  flex: 0 0 37%;
+}
+.right {
+  padding-left: 2.6rem;
+  padding-left: 2.2rem;
+  padding-top: 1.8rem;
+  width: 100%;
+  &__toggle {
+    & span {
+      font-weight: 700;
+      font-size: 1.4rem;
+      line-height: 1.8rem;
+    }
+    & label {
+      width: 2.4rem;
+      height: 8px;
+      margin-left: -4px;
+      margin-right: -4px;
+      & input {
+        &:checked + .right__slider::before {
+          transform: translateX(2.1rem);
+        }
+      }
+    }
+  }
+  &__slider {
+    &::before {
+      bottom: -3.2px;
+      width: 1.6rem;
+      height: 1.6rem;
+      left: -6px;
+    }
+  }
+  &__inputCont {
+    margin-top: 2.3rem;
+  }
+  &__input {
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+  }
+  &__inputPlaceholder {
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    left: 5px;
+  }
+}
+.bottom {
+  margin-top: 2.1rem;
+  margin-bottom: 1.8rem;
+
+  @include respond(tab-land) {
+    margin-bottom: 5.5rem;
+  }
+
+  &__inputPlaceholder {
+    left: 5px;
+    top: 8px;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+  }
+  &__input {
+    resize: none;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    height: 15.7rem;
+  }
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}

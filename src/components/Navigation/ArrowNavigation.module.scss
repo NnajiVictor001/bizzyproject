@@ -1,0 +1,24 @@
+.nav {
+    position: relative;
+  & span {
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+    position: absolute; 
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto; 
+  }
+  &__leftArrow {
+    cursor: pointer;
+    position: relative;
+    right: 2.5rem;
+  }
+  &__rightArrow {
+    transform: rotate(180deg);
+    cursor: pointer;
+    position: relative;
+    left: 3rem;
+  }
+}

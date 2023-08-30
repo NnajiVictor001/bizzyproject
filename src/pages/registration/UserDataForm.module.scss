@@ -1,0 +1,14 @@
+@import "~mixins/generalMixins.module.scss";
+@import "~mixins/mediaQueryManager.scss";
+
+.container {
+  @include container;
+
+  @include respond(tab-port) {
+    padding: 2rem 8rem;
+  }
+
+  @include respond(tab-port) {
+    padding: 2rem 4rem;
+  }
+}

@@ -1,0 +1,43 @@
+@import "~mixins/appColors.module.scss";
+@import "~mixins/mediaQueryManager.scss";
+
+.main {
+  padding: 14rem 26rem;
+  text-align: center;
+  background-color: $color-yellow-4;
+
+  @include respond(tab-port) {
+    padding: 14rem;
+  }
+
+  @include respond(big-phone) {
+    padding: 6rem;
+  }
+
+  &__text {
+    font-weight: 600;
+    font-size: 2rem;
+    line-height: 2.4rem;
+    text-align: center;
+    letter-spacing: 0.2px;
+    text-transform: capitalize;
+    margin-bottom: 2rem;
+  }
+
+  &__btn {
+    margin-top: 4.8rem;
+    display: inline-flex;
+    align-items: center;
+    column-gap: 1.7rem;
+    padding: 1.2rem 5.7rem 1.2rem 5.7rem;
+    border-radius: 0px;
+    & a {
+      font-weight: 800;
+      font-size: 1.6rem;
+      line-height: 1.9rem;
+      text-align: center;
+      letter-spacing: 0.46px;
+      text-decoration: none;
+    }
+  }
+}

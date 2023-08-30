@@ -1,0 +1,71 @@
+@import "~mixins/appColors.module.scss";
+@import "~mixins/mediaQueryManager.scss";
+
+.main {
+  padding: 2rem;
+  background: $color-gray-2;
+
+  @include respond(tab-port) {
+    padding: 2rem 3rem;
+  }
+
+  img {
+    cursor: pointer;
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid $color-gray-16;
+    flex-wrap: wrap;
+
+    @include respond(tab-port) {
+      justify-content: center;
+      gap: 2rem;
+    }
+  }
+
+  &__menu_con {
+    text-align: center;
+
+    ul {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 3.2rem;
+
+      li {
+        font-weight: 600;
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+        // color: $color-gray-17;
+        padding: 1rem 0;
+        cursor: pointer;
+
+        a {
+          text-decoration: none;
+          color: inherit;
+        }
+      }
+
+      li:hover {
+        color: $color-gray-14;
+      }
+    }
+
+    p {
+      font-weight: 600;
+      font-size: 1.2rem;
+      line-height: 130%;
+      // color: $color-gray-13;
+    }
+  }
+
+  &__social_con {
+    img {
+      margin-left: 2rem;
+    }
+  }
+}

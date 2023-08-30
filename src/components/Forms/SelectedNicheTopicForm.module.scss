@@ -1,0 +1,45 @@
+@import "~mixins/appColors.module.scss";
+@import "~mixins/mediaQueryManager.scss";
+
+.form {
+  padding: 3.3rem 33.2rem 0;
+
+  @include respond(tab-port) {
+    padding: 0 12rem;
+  }
+
+  @include respond(big-phone) {
+    padding: 0 8rem;
+  }
+
+  @include respond(small-phone) {
+    padding: 0 5rem;
+  }
+
+  &__description {
+    font-weight: 400;
+    color: $color-gray-4;
+    margin-top: 2rem;
+    font-size: 1.6rem;
+    line-height: 130%;
+  }
+
+  &__btnLayout {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+  }
+
+  &__btn {
+    flex: 1 1;
+
+    @include respond(big-phone) {
+      flex: none;
+    }
+
+    &:not(:last-child) {
+      margin-right: 2.4rem;
+    }
+  }
+}

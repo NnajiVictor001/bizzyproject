@@ -1,0 +1,23 @@
+@import "~mixins/appColors.module.scss";
+
+.preview_contain {
+  flex: 1;
+  margin-left: 3rem;
+  margin-right: 3rem;
+  text-align: center;
+  height: 80rem;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  border: 1px solid $color-gray-6;
+  border-radius: 0.5rem;
+  padding: 2rem;
+
+  &__title {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 3rem;
+    line-height: 3rem;
+    color: $color-gray-4;
+  }
+}

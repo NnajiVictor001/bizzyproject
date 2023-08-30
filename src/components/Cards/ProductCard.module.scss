@@ -1,0 +1,90 @@
+@import "~mixins/mediaQueryManager.scss";
+
+.productCard {
+  position: relative;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__heading {
+    font-weight: 600;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  &__dots {
+    cursor: pointer;
+  }
+}
+
+.card {
+  box-shadow: 0rem 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  border-radius: 1rem;
+  cursor: pointer;
+
+  &__con {
+
+    &__loading {
+      margin-top: 7rem;
+    }
+
+  }
+
+  &__btnCont {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+}
+
+.barPopup {
+  position: absolute;
+  right: 0;
+  top: 4rem;
+  background: #ffffff;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  filter: drop-shadow(0px 1.9525px 1.9525px rgba(0, 0, 0, 0.25));
+  padding: 0.7rem 0.6rem 0.6rem 0.7rem;
+
+  &__btn {
+    padding: 0.4rem 1.3rem;
+    background: #fff8e3;
+    border: 0.8875px solid #000000;
+    border-right: none;
+    height: 2.8rem;
+    width: 4.3rem;
+    cursor: pointer;
+
+    img {
+      width: 100%;
+    }
+
+    &__eye {
+      scale: 1.4;
+    }
+  }
+
+  &__btn:first-child {
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+  }
+
+  &__btn:last-child {
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    border-right: 0.8875px solid #000000;
+  }
+}

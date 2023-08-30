@@ -1,0 +1,37 @@
+@import "~mixins/mediaQueryManager.scss";
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 6rem;
+  gap: 5rem;
+
+  @include respond(tab-port) {
+    flex-wrap: wrap;
+    flex-direction: column-reverse !important;
+    gap: 0;
+  }
+
+  &__grow {
+    margin: 0 3rem;
+
+    @include respond(big-phone) {
+      margin: 0;
+    }
+  }
+
+  @include respond(tab-port) {
+    margin: 2rem 5rem 0;
+  }
+}
+
+.img {
+  @include respond(small-phone) {
+    margin-top: 5rem;
+  }
+
+  img {
+    width: 100%;
+  }
+}

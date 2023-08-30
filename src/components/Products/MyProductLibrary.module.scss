@@ -1,0 +1,60 @@
+@import "~mixins/appColors.module.scss";
+@import "~mixins/mediaQueryManager.scss";
+
+.main {
+  width: 100%;
+  padding-bottom: 3rem;
+  margin-top: -1.3rem;
+
+  &__top_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 5rem 0 3rem;
+  }
+
+  &__row3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 21rem));
+    margin-top: 2.4rem;
+    column-gap: 2.2rem;
+    row-gap: 3rem;
+  }
+
+  &__rcProducts {
+    font-weight: 600;
+    font-size: 3rem;
+    line-height: 3.8rem;
+    color: $color-black-1;
+
+    @include respond(big-phone) {
+      font-size: 2rem;
+    }
+  }
+
+  &__search {
+    border: 1px solid $color-black-1;
+    border-radius: 1rem;
+    box-shadow: none;
+    width: 50%;
+  }
+
+  &__btmBtnText {
+    font-weight: 700;
+    font-size: 1.4rem;
+  }
+
+  &__btmBtnCont {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 3rem;
+  }
+
+  &__mainBtn {
+    border: 1px solid $color-black-1;
+    width: 100%;
+    padding: 1rem 3rem;
+  }
+}

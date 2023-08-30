@@ -1,0 +1,65 @@
+@import "~mixins/appColors.module.scss";
+@import "~mixins/generalMixins.module.scss";
+@import "~mixins/mediaQueryManager.scss";
+
+.header {
+  padding: 1.8rem 1rem 1.8rem 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $color-yellow-4;
+
+  @include respond(big-phone) {
+    padding: 1rem;
+  }
+
+  @include respond(small-phone) {
+    img {
+      display: none;
+    }
+  }
+
+  &__navLink {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.6rem;
+    color: $color-black-1;
+    transition: border-bottom 0.3s;
+    cursor: pointer;
+
+    &:hover {
+      color: lighten($color-black-1, 30%);
+    }
+
+    &:not(:last-child) {
+      margin-right: 3.2rem;
+
+      @include respond(big-phone) {
+        margin-right: 1rem;
+      }
+    }
+  }
+  &__navLink1 {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.6rem;
+    color: $color-black-1;
+    margin-right: 2.8rem;
+    cursor: pointer;
+
+    @include respond(tab-port) {
+      margin-right: 1rem;
+    }
+
+    &:hover {
+      color: lighten($color-black-1, 30%);
+    }
+  }
+  &__btnText {
+    font-weight: 800;
+    font-size: 1.4rem;
+    padding: 1rem 0.6rem;
+    color: $color-white-1;
+    text-decoration: none;
+  }
+}

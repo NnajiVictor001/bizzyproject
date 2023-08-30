@@ -1,0 +1,29 @@
+@import "~mixins/appColors.module.scss";
+
+.body_con__item {
+  text-align: center;
+  scroll-snap-align: start;
+  width: 7rem;
+  height: 9rem;
+  position: relative;
+  cursor: pointer;
+
+  &__out {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1 / 1;
+    z-index: 0;
+    align-items: center;
+    display: flex;
+  }
+
+  &__image {
+    width: 100%;
+    border: 2px solid $color-gray-6;
+  }
+
+  .select_item_image {
+    border: 4px solid $color-orange-2;
+    // transform: scale(1.3);
+  }
+}

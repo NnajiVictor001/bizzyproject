@@ -1,0 +1,62 @@
+@import "~mixins/appColors.module.scss";
+@import "~mixins/generalMixins.module.scss";
+@import "~mixins/mediaQueryManager.scss";
+
+.order {
+  border: 1px solid $color-black-1;
+  border-top: none;
+  border-radius: 0px 0px 1rem 1rem;
+  &__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: center;
+    padding: 14rem 2rem;
+
+    @include respond(tab-land) {
+      padding: 10rem 2rem;
+    }
+  }
+  &__title {
+    font-size: 14px;
+    font-weight: 800;
+    color: $color-black-1;
+  }
+  &__description {
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 1.4rem;
+  }
+  &__description2 {
+    margin-top: 2.4rem;
+    text-align: center;
+    font-size: 1.4rem;
+  }
+  &__button {
+    margin-top: 3.2rem;
+    & div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  &__buttonTitle {
+    margin-right: 5px;
+    font-size: 1.4rem;
+  }
+  &__descriptionLinkText {
+    color: $color-blue-1;
+    cursor: pointer;
+  }
+  &__CheckboxButton {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0rem 5rem 2rem 0;
+  }
+
+  &__stripe {
+    font-size: 1.8rem;
+  }
+}

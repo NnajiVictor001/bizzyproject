@@ -1,0 +1,23 @@
+@import "~mixins/appColors.module.scss";
+
+.helpButton {
+  padding: 6px 2rem;
+  background-color: $color-orange-1;
+  position: fixed;
+  transform: rotate(270deg);
+  right: -2.4rem;
+  top: calc(50vh - 1.6rem);
+  border: none;
+  border-radius: 0.6rem 0.6rem 0rem 0rem;
+  box-shadow: -0.4rem 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
+  color: $color-black-1;
+  font-weight: 700;
+  font-size: 1.6rem;
+  cursor: pointer;
+  z-index: 99;
+  transition: all 0.3s;
+
+  &:hover {
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5);
+  }
+}

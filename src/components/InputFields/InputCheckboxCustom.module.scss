@@ -1,0 +1,73 @@
+@import "~mixins/appColors.module.scss";
+@import "~mixins/mediaQueryManager.scss";
+@import "~mixins/generalMixins.module.scss";
+
+.container {
+  padding: 0.8rem;
+  background: $color-orange-2;
+  box-shadow: 0px 2px 4px $color-gray-6;
+  border-radius: 1rem;
+  transition: all 0.2s;
+
+  &:hover {
+    @include hover;
+  }
+}
+
+.customCheckbox {
+  cursor: pointer;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  color: $color-black-1;
+  position: relative;
+  padding-left: 3.2rem;
+  font-weight: 700;
+  font-size: 1.3rem;
+  line-height: 1.6rem;
+
+  &__label {
+    width: 8.5rem;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  &__input {
+    position: absolute;
+    opacity: 0;
+    height: 0;
+    width: 0;
+
+    &:checked ~ .customCheckbox__checkMark::after {
+      display: block;
+    }
+  }
+
+  &__checkMark {
+    position: absolute;
+    top: -2px;
+    left: 0;
+    height: 2.5rem;
+    width: 2.5rem;
+    border: 1px solid $color-black-1;
+    border-radius: 5px;
+    background-color: $color-white-1;
+
+    &::after {
+      content: "";
+      position: absolute;
+      display: none;
+      left: 8px;
+      top: 4px;
+      width: 7px;
+      height: 1.2rem;
+      border: solid $color-black-1;
+      border-width: 0 2px 2px 0;
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+
+      @include respond(tab-land) {
+        left: 3px;
+      }
+    }
+  }
+}

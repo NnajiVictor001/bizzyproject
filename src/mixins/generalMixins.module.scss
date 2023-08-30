@@ -1,0 +1,29 @@
+@mixin txtCenter {
+  text-align: center;
+}
+
+@mixin container {
+  padding: 2rem 14rem;
+}
+
+@mixin hover {
+  transform: translateY(-3px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+@mixin scrollBar {
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+  &::-webkit-scrollbar-track {
+    border-radius: 1rem;
+    background: $color-gray-5;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: $color-black-1;
+    border-radius: 1rem;
+    &:hover {
+      background-color: $color-black-2;
+    }
+  }
+}

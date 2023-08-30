@@ -1,0 +1,20 @@
+@import "~mixins/appColors.module.scss";
+@import "~mixins/mediaQueryManager.scss";
+
+.main {
+  padding: 2rem;
+  background: $color-blue-6;
+
+  @include respond(big-phone) {
+    padding: 2rem 4rem;
+  }
+
+  &__txt {
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 105%;
+    text-align: center;
+    letter-spacing: -1px;
+    // color: $color-blue-2;
+  }
+}

@@ -1,0 +1,34 @@
+@import '~mixins/mediaQueryManager.scss';
+
+.main__third {
+  margin-top: 5rem;
+  padding: 2rem;
+
+  @include respond(tab-port) {
+    margin-top: 6rem;
+  }
+
+  h1 {
+    font-weight: 700;
+    font-size: 6rem;
+    line-height: 140%;
+    text-align: center;
+
+    @include respond(tab-port) {
+      font-size: 3.5rem;
+    }
+
+    @include respond(big-phone) {
+      font-size: 3rem;
+    }
+  }
+
+  p {
+    margin-top: 2rem;
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 3rem;
+    text-align: center;
+    letter-spacing: 0.2px;
+  }
+}

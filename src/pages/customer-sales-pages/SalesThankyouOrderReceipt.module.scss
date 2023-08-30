@@ -1,0 +1,94 @@
+@import "~mixins/appColors.module.scss";
+@import "~mixins/mediaQueryManager.scss";
+
+.main {
+  background: $color-blue-6;
+  padding: 2rem;
+  border: 1px solid $color-gray-6;
+
+  &__order_txt {
+    font-weight: 300;
+    font-size: 1.7rem;
+    line-height: 150%;
+    letter-spacing: -0.252632px;
+    // color: $color-gray-4;
+    border-bottom: 1px solid $color-gray-5;
+
+    @include respond(big-phone) {
+      font-size: 1.4rem;
+    }
+  }
+
+  &__happier {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid $color-gray-5;
+    padding: 2.5rem 0;
+
+    @include respond(big-phone) {
+      padding: 1.5rem 0;
+    }
+
+    &__txt {
+      font-weight: 500;
+      font-size: 1.7rem;
+      line-height: 150%;
+      letter-spacing: -0.252632px;
+      // color: $color-gray-19;
+
+      @include respond(big-phone) {
+        font-size: 1.4rem;
+      }
+    }
+  }
+
+  &__total {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 1.5rem;
+
+    &__txt {
+      font-weight: 500;
+      font-size: 2rem;
+      line-height: 150%;
+      letter-spacing: -0.252632px;
+      // color: $color-gray-19;
+
+      @include respond(big-phone) {
+        font-size: 1.7rem;
+      }
+    }
+
+    &__price_con {
+      display: flex;
+      align-items: baseline;
+
+      &__unit {
+        font-weight: 400;
+        font-size: 1.5rem;
+        line-height: 150%;
+        letter-spacing: -0.252632px;
+        // color: $color-gray-20;
+
+        @include respond(big-phone) {
+          font-size: 1.2rem;
+        }
+      }
+
+      &__value {
+        font-weight: 500;
+        font-size: 3rem;
+        line-height: 150%;
+        letter-spacing: -0.252632px;
+        // color: $color-gray-19;
+        margin-left: 1rem;
+
+        @include respond(big-phone) {
+          font-size: 2.7rem;
+        }
+      }
+    }
+  }
+}

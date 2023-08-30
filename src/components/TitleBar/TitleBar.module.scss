@@ -1,0 +1,55 @@
+.titleBackg {
+    background-color: #EFEFEF;
+    margin-bottom: 2rem;
+    padding: 0.2rem 1rem;
+    width: 70%;
+    font-size: 14px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.input_margin {
+    width: 2.6rem;
+}
+
+.margin_arrow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.margin_title {
+    font-size: 0.95rem;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.arrow {
+    padding: 0.4rem 0.5rem;
+
+    &__up {
+        padding-left: 1.8rem;
+        cursor: pointer;
+    }
+
+    &__down {
+        padding: 0 0 0 1rem;
+        cursor: pointer;
+    }
+}
+
+.arrowIcons {
+    display: flex;
+}

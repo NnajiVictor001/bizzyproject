@@ -1,0 +1,137 @@
+@import "~mixins/appColors.module.scss";
+@import "~mixins/mediaQueryManager.scss";
+@import "~mixins/generalMixins.module.scss";
+
+.footer {
+  color: $color-white-1;
+  &__btmContainer {
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid rgba(117, 117, 117, 0.5);
+    background-color: $color-black-1;
+  }
+  &__logo {
+    padding-top: 2rem;
+    padding-bottom: 7px;
+  }
+}
+.main {
+  padding: 5.8rem 12rem 5.2rem 12rem;
+  background-color: $color-black-1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+
+  @include respond(tab-land) {
+    padding: 5rem;
+  }
+
+  @include respond(tab-port) {
+    padding: 3rem;
+  }
+
+  &__heading {
+    font-weight: 700;
+    font-size: 3.2rem;
+    line-height: 3.9rem;
+  }
+  &__leftList {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 2.4rem;
+    grid-row-gap: 1.6rem;
+    list-style: none;
+    margin-top: 3.2rem;
+  }
+  &__listItem {
+    display: flex;
+    & p {
+      margin-left: 3px;
+    }
+  }
+  &__checkBox {
+    background-color: $color-white-1 !important;
+    margin-top: 3px;
+    border: none;
+    width: 1.6rem;
+    height: 1.6rem;
+    &::after {
+      height: 6.59px;
+      width: 4.31px;
+      left: 5.7px;
+      top: 3.5px;
+      border-width: 0 1.8px 1px 0;
+    }
+  }
+  &__formCont {
+    margin-top: 3.9rem;
+  }
+
+  &__left {
+    flex: 1;
+
+    @include respond(tab-port) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  &__right {
+    flex: 1;
+    display: flex;
+    column-gap: 7rem;
+
+    @include respond(tab-port) {
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  &__rightList {
+    list-style: none;
+    & a {
+      text-decoration: none;
+      color: $color-white-1;
+
+      &:hover {
+        color: darken($color-white-1, 30%);
+      }
+    }
+  }
+  &__rightListHeading {
+    font-weight: 700;
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+  }
+  &__rightListItem {
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 150%;
+    margin-top: 1.7rem;
+
+    & span {
+      cursor: pointer;
+      &:hover {
+        color: darken($color-white-1, 30%);
+      }
+    }
+  }
+
+  &__navbtn {
+    display: inline-block;
+    padding: 1.6rem 3.2rem;
+    border-radius: 1rem;
+    background-color: $color-yellow-1;
+    color: $color-black-1;
+    transition: all 0.2s;
+    cursor: pointer;
+
+    &:hover {
+      @include hover;
+    }
+  }
+}

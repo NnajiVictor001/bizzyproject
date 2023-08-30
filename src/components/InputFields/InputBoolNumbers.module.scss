@@ -1,0 +1,35 @@
+@import "~mixins/appColors.module.scss";
+
+.input_bool_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 1.4rem;
+  width: 50%;
+}
+
+.radio_container {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  &__circle {
+    width: 2rem;
+    height: 2rem;
+    border: 1px solid $color-black-1;
+    border-radius: 2rem;
+  }
+
+  &__title {
+    font-family: 'Nunito';
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+    color: $color-black-1;
+    margin-left: 1rem;
+  }
+
+  .checked {
+    border-width: 6px;
+  }
+}

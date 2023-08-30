@@ -1,0 +1,13 @@
+@import "~mixins/generalMixins.module.scss";
+
+.txtCenter {
+  @include txtCenter;
+}
+
+.txtParagraph {
+  margin-top: 1.2rem;
+  font-family: "Nunito", sans-serif;
+  font-weight: 500;
+  font-size: 1.6rem;
+  margin-bottom: 4rem;
+}

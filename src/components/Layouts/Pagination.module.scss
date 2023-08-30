@@ -1,0 +1,30 @@
+@import "~mixins/appColors.module.scss";
+
+.pagination {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  margin-top: 2rem;
+
+  &__page_link {
+    position: relative;
+    display: block;
+    padding: 0.5rem 0.75rem;
+    background-color: $color-white-1;
+    font-weight: 700;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    color: $color-black-1;
+    text-decoration: none;
+  }
+
+  &__page_link:hover {
+    background-color: darken($color-white-1, 10%);
+  }
+
+  .active_page_link {
+    color: $color-orange-1;
+    background: #ffdf601A;
+    border-radius: 15px;
+  }
+}

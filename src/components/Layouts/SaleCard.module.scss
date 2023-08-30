@@ -1,0 +1,70 @@
+@import "~mixins/appColors.module.scss";
+@import "~mixins/mediaQueryManager.scss";
+
+.sale {
+  border-radius: 1rem;
+  padding: 2rem;
+  flex: 0 0 50%;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+  @include respond(tab-port) {
+    flex: 1;
+  }
+
+  &:not(:last-child) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 1.6rem;
+    margin-bottom: 1.2rem;
+  }
+
+  &__contentType1 {
+    color: $color-gray-4;
+    margin-bottom: 4rem;
+  }
+
+  &__contentType2 {
+    color: $color-gray-4;
+    margin-bottom: 3rem;
+  }
+
+  &__back_img {
+    margin-bottom: 2.3rem;
+    width: 60%;
+    object-fit: cover;
+  }
+
+  &__inner {
+    text-align: center;
+  }
+
+  &__input:not(:last-child) {
+    margin-bottom: 8rem;
+  }
+
+  &__input:last-child {
+    margin-bottom: 5rem;
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    margin-top: auto;
+
+    button {
+      border: none;
+      background: transparent;
+      cursor: pointer;
+    }
+  }
+
+  &__no {
+    color: $color-gray-4;
+    font-weight: 700;
+    font-size: 1.4rem;
+  }
+}

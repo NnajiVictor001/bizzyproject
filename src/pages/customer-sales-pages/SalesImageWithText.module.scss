@@ -1,0 +1,47 @@
+@import "~mixins/appColors.module.scss";
+@import "~mixins/mediaQueryManager.scss";
+
+.main {
+  width: 100%;
+  font-family: inherit;
+
+  &__con {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    grid-gap: 1rem;
+    align-items: center;
+
+    // &__img {
+    //   img {
+    //     width: 100%;
+    //   }
+    // }
+  }
+
+  &__left {
+    padding: 2rem;
+
+    &__top {
+      font-weight: 600;
+      font-size: 1.4rem;
+      line-height: 150%;
+      // color: $color-black-3;
+
+      @include respond(tab-land) {
+        font-size: 1.4rem;
+      }
+    }
+
+    &__middle {
+      font-weight: 400;
+      font-size: 1.1rem;
+      line-height: 150%;
+      // color: $color-gray-13;
+      margin: 2rem 0 3rem;
+
+      @include respond(tab-land) {
+        font-size: 1.2rem;
+      }
+    }
+  }
+}

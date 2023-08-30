@@ -1,0 +1,29 @@
+@import "~mixins/appColors.module.scss";
+@import "~mixins/generalMixins.module.scss";
+@import "~mixins/mediaQueryManager.scss";
+
+.main {
+  background: $color-blue-6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 12rem;
+
+  @include respond(big-phone) {
+    padding: 2rem 3rem;
+  }
+
+  &__header {
+    font-weight: 700;
+    font-size: 4rem;
+    line-height: 105%;
+    text-align: center;
+    color: $color-blue-2;
+    margin: 4.9rem 0;
+    padding: 0 12rem;
+
+    @include respond(big-phone) {
+      font-size: 2.5rem;
+    }
+  }
+}

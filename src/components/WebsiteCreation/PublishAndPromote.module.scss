@@ -1,0 +1,96 @@
+@import "~mixins/appColors.module.scss";
+@import "~mixins/generalMixins.module.scss";
+
+.main {
+  padding: 2rem;
+  border: 1px solid $color-black-1;
+  border-top: none;
+  border-radius: 0px 0px 1rem 1rem;
+
+  &__heading {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.6rem;
+    line-height: 2rem;
+  }
+
+  &__formContainer {
+    margin-top: 3rem;
+  }
+
+  &__formHeading {
+    font-weight: 700;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    color: $color-gray-4;
+  }
+
+  &__form {
+    margin-top: 1.7rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+  }
+
+  &__input {
+    height: 5.6rem;
+    font-weight: 700;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    padding-left: 2rem;
+  }
+  &__leftInput {
+    border-radius: 1rem 0rem 0rem 1rem;
+    border-right: none;
+  }
+  &__rightInput {
+    border-radius: 0rem 1rem 1rem 0rem;
+    background-color: $color-white-4;
+    padding-left: 2rem;
+    pointer-events: none;
+  }
+  &__placeholder {
+    top: 1.7rem;
+    font-weight: 700;
+    font-size: 1.6rem;
+    line-height: 2rem;
+  }
+  &__btnCont {
+    text-align: right;
+    margin-top: 4rem;
+  }
+  &__btn {
+    padding: 1.4rem 1rem;
+    font-weight: 700;
+    font-size: 1.6rem;
+    line-height: 2rem;
+  }
+  &__publishHeading {
+    margin-top: 4rem;
+  }
+  &__text {
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    color: $color-gray-4;
+    margin-top: 2px;
+  }
+  &__funnelsCont {
+    display: flex;
+    align-items: center;
+    column-gap: 1.3rem;
+    margin-top: 2.9rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+
+    & img {
+      cursor: pointer;
+      transition: all 0.2s;
+
+      &:hover {
+        @include hover;
+      }
+    }
+  }
+}

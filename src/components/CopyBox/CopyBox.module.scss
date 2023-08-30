@@ -1,0 +1,43 @@
+@import "~mixins/appColors.module.scss";
+.main {
+  position: relative;
+  & :last-child {
+    height: 100%;
+  }
+}
+.tiny {
+  width: min-content;
+  display: inline;
+  position: absolute;
+  z-index: 10;
+  left: 85%;
+  top: -2rem;
+  white-space: nowrap;
+  color: $color-white-1;
+  background-color: $color-black-2;
+  padding: 1rem;
+  font-size: 1rem;
+  border-radius: 3px;
+  font-weight: 400;
+  transition: ease-in-out 0.3s;
+  opacity: 0;
+  visibility: hidden;
+}
+.tinyShow {
+  width: min-content;
+  display: inline;
+  position: absolute;
+  z-index: 10;
+  left: 85%;
+  top: -2rem;
+  white-space: nowrap;
+  color: $color-white-1;
+  background-color: $color-black-2;
+  padding: 1rem;
+  font-size: 1rem;
+  border-radius: 3px;
+  font-weight: 400;
+  transition: ease-in-out 0.3s;
+  opacity: 1;
+  visibility: visible;
+}

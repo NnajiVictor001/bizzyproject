@@ -1,0 +1,21 @@
+@import "~mixins/mediaQueryManager.scss";
+
+.heading {
+  font-weight: 800;
+  font-size: 7.2rem;
+  line-height: 8.8rem;
+
+  @include respond(tab-land) {
+    font-size: 6rem;
+  }
+
+  @include respond(tab-port) {
+    font-size: 4rem;
+    line-height: 6rem;
+  }
+
+  @include respond(big-phone) {
+    font-size: 2.5rem;
+    line-height: 3rem;
+  }
+}

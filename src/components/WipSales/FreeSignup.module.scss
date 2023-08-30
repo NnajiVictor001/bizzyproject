@@ -1,0 +1,71 @@
+@import "~mixins/appColors.module.scss";
+@import "~mixins/mediaQueryManager.scss";
+
+.main {
+  padding: 10.2rem 9.5rem 11.2rem 12rem;
+  background-color: $color-yellow-4;
+  position: relative;
+
+  @include respond(big-phone) {
+    padding: 6rem;
+  }
+
+  &__bg {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+
+    @include respond(big-phone) {
+      display: none;
+    }
+  }
+  &__heading {
+    font-weight: 800;
+    font-size: 5rem;
+    line-height: 120%;
+  }
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 4rem;
+  }
+  &__btn {
+    border-radius: 8px;
+    padding: 1.5rem 3.7rem;
+    & a {
+      font-weight: 800;
+      font-size: 1.8rem;
+      line-height: 150%;
+      color: $color-white-1;
+      text-decoration: none;
+    }
+  }
+  &__checkBox {
+    background-color: $color-white-1 !important;
+    border: none;
+    width: 2.4rem;
+    height: 2.4rem;
+    &::after {
+      height: 9.59px;
+      width: 7.31px;
+      left: 8.5px;
+      top: 4.5px;
+
+      @include respond(big-phone) {
+        left: 4.5px;
+      }
+    }
+  }
+  &__checkBoxRow {
+    margin-top: 4.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+  }
+  &__checkBoxCont {
+    display: flex;
+    column-gap: 1rem;
+  }
+}

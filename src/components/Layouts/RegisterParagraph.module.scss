@@ -1,0 +1,22 @@
+@import "~mixins/generalMixins.module.scss";
+@import "~mixins/appColors.module.scss";
+
+.register {
+  font-family: "Nunito", sans-serif;
+  font-weight: 500;
+  font-size: 1.2rem;
+  margin-top: 2rem;
+
+  @include txtCenter;
+
+  &__link:link,
+  &__link:visited {
+    color: $color-blue-1;
+    cursor: pointer;
+  }
+
+  &__link:hover,
+  &__link:active {
+    color: #053792;
+  }
+}

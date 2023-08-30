@@ -1,0 +1,127 @@
+@import "~mixins/appColors.module.scss";
+@import "~mixins/mediaQueryManager.scss";
+
+.simpleTab {
+  font-weight: 700;
+  font-size: 1.4rem;
+  display: flex;
+  text-decoration: none;
+  color: $color-black-1;
+  position: relative;
+  align-items: center;
+  left: 0px;
+  padding: 1rem 6rem 1rem 2rem;
+  white-space: nowrap;
+  cursor: pointer;
+
+  @include respond(tab-port) {
+    padding: 1rem;
+  }
+
+  @include respond(big-phone) {
+    padding: 3px;
+  }
+
+  &__icon {
+    margin-right: 1.39rem;
+
+    @include respond(big-phone) {
+      margin-right: 0;
+    }
+  }
+
+  & span {
+    height: 0%;
+    position: absolute;
+    background: linear-gradient(90.45deg,
+        rgba(0, 0, 0, 0.08) 0.38%,
+        rgba(0, 0, 0, 0) 99.61%);
+    top: 0;
+    width: 100%;
+    left: 0;
+    border-left: 0.4rem solid black;
+    transition: ease-in-out 0.3s;
+  }
+
+  & :hover &span {
+    background: linear-gradient(90.45deg,
+        rgba(0, 0, 0, 0.08) 0.38%,
+        rgba(0, 0, 0, 0) 99.61%);
+    height: 100%;
+    width: 100%;
+    border-left: 0.4rem solid black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: ease-in-out 0.3s;
+  }
+
+  & em {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 1.4rem;
+
+    @include respond(big-phone) {
+      display: none;
+    }
+  }
+}
+
+.simpleTabActive {
+  font-weight: 700;
+  font-size: 1.4rem;
+  display: flex;
+  text-decoration: none;
+  color: $color-black-1;
+  position: relative;
+  align-items: center;
+  padding: 1rem 6rem 1rem 2rem;
+  white-space: nowrap;
+  cursor: pointer;
+
+  & span {
+    background: linear-gradient(90.45deg,
+        rgba(0, 0, 0, 0.08) 0.38%,
+        rgba(0, 0, 0, 0) 99.61%);
+    height: 100%;
+    width: 100%;
+    border-left: 0.4rem solid black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: ease-in-out 0.3s;
+  }
+
+  &__icon {
+    margin-right: 1.39rem;
+  }
+
+  & em {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 1.4rem;
+
+    @include respond(big-phone) {
+      display: none;
+    }
+  }
+
+  @include respond(big-phone) {
+    padding: 3px;
+  }
+}
+
+.nestedTab_con {
+  padding: 1rem 2rem 1rem 4rem;
+
+  &__item {
+    display: block;
+    font-weight: 400;
+    font-size: 1.4rem;
+    text-decoration: none;
+    color: $color-black-1;
+    white-space: nowrap;
+    cursor: pointer;
+    padding: 1rem 0;
+  }
+}

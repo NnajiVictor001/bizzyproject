@@ -1,0 +1,55 @@
+@import "~mixins/appColors.module.scss";
+
+.input {
+  position: relative;
+
+  &__field {
+    border-radius: 1rem;
+    border: 1px solid $color-gray-6;
+    padding: 1.3rem 4rem 1.3rem 1.3rem;
+    width: 100%;
+    font-weight: 700;
+    font-size: 1.6rem;
+    line-height: 1.8rem;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:focus + .input__placeholder,
+    &:read-only + .input__placeholder,
+    &:not(:focus):valid + .input__placeholder {
+      top: -8px;
+      color: $color-black-1;
+      font-size: 1.2rem;
+      font-weight: 500;
+    }
+  }
+
+  &__placeholder {
+    color: $color-gray-4;
+    pointer-events: none;
+    position: absolute;
+    top: 25%;
+    left: 2rem;
+    background-color: $color-white-1;
+    border-left: 1rem solid $color-white-1;
+    border-right: 1rem solid $color-white-1;
+    transition: all 0.2s ease-in-out;
+  }
+
+  &__toggle {
+    position: absolute;
+    right: 3%;
+    top: 25%;
+    cursor: pointer;
+
+    &:hover {
+      color: $color-black-1;
+    }
+  }
+}
+
+.rel {
+  position: relative;
+}

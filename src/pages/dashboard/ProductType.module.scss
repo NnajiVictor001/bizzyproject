@@ -1,0 +1,43 @@
+@import "~mixins/mediaQueryManager.scss";
+
+.container {
+  padding: 4rem 8rem 0;
+  max-width: 130rem;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include respond(big-phone) {
+    padding: 0 2rem;
+  }
+}
+
+.product_types {
+  margin-top: 4rem;
+  margin-bottom: 15rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  grid-column-gap: 4rem;
+  grid-row-gap: 2rem;
+
+  @include respond(small-phone) {
+    grid-template-columns: repeat(auto-fit, minmax(23rem, 1fr));
+  }
+}
+
+.bottom_con {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5rem;
+
+  &__Btn {
+    flex: 0 0 22%;
+
+    @include respond(big-phone) {
+      flex: none;
+    }
+
+    &:not(:last-child) {
+      margin-right: 2rem;
+    }
+  }
+}

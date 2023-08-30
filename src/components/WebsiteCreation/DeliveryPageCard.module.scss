@@ -1,0 +1,171 @@
+@import "~mixins/appColors.module.scss";
+@import "~mixins/generalMixins.module.scss";
+
+.delivery {
+  border: 1px solid $color-black-1;
+  border-top: none;
+  border-radius: 0px 0px 1rem 1rem;
+  padding: 2.7rem 3rem 3rem 2.3rem;
+
+  &__content {
+    max-height: 37rem;
+    overflow-y: scroll;
+    padding-right: 3rem;
+    @include scrollBar;
+  }
+
+  &__toggle {
+    & span {
+      font-weight: 700;
+      font-size: 1.4rem;
+      line-height: 1.8rem;
+    }
+
+    & label {
+      width: 2.4rem;
+      height: 1rem;
+      margin-left: 4px;
+      margin-right: 4px;
+
+      & input {
+        &:checked+.right__slider::before {
+          transform: translateX(2.1rem);
+        }
+      }
+    }
+  }
+
+  &__slider {
+    &::before {
+      bottom: -3.2px;
+      width: 1.6rem;
+      height: 1.6rem;
+      left: -6px;
+    }
+  }
+
+  &__halfInput {
+    margin: 2.7rem 0;
+
+    & input {
+      font-family: "Plus Jakarta Sans", sans-serif;
+      font-weight: 400;
+      line-height: 1.8rem;
+    }
+
+    & textarea {
+      font-family: "Plus Jakarta Sans", sans-serif;
+      font-weight: 400;
+      line-height: 1.8rem;
+    }
+  }
+
+  &__textAreaPlaceholder {
+    font-size: 1.4rem;
+    top: 1rem;
+  }
+
+  &__textAreaInput {
+    resize: none;
+    font-size: 1.4rem;
+  }
+
+  &__textAreaInputLink {
+    margin-top: 3rem;
+  }
+
+  &__divider {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2.7rem;
+  }
+
+  &__dividerText {
+    font-size: 1.2rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  &__dividerLine {
+    width: 38%;
+    height: 1px;
+    background-color: $color-gray-6;
+  }
+
+  &__halfInputButton {
+    margin-top: 4px;
+  }
+
+  &__halfInputHeading {
+    margin-top: 2.4rem;
+  }
+
+  &__textAreaInput {
+    font-size: 1.4rem;
+  }
+
+  &__nextContainer {
+    margin-top: 4rem;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__nextTxtContainer {
+    .delivery__checkbox {
+      width: 3rem;
+      height: 3rem;
+      margin-top: 3px;
+      display: flex;
+      justify-content: center;
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 9px;
+        top: 3px;
+        width: 9px;
+        height: 1.7rem;
+        border: solid $color-black-1;
+        border-width: 0 2px 2px 0;
+      }
+    }
+
+    display: flex;
+  }
+
+  &__textContainer {
+    display: flex;
+    flex-direction: column;
+    margin-left: 1rem;
+  }
+
+  &__greatTxt {
+    font-size: 1.4rem;
+  }
+
+  &__nextTxt {
+    font-size: 1.4rem;
+    font-weight: 800;
+  }
+}
+
+.warning {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "This input can not be empty";
+    display: inline-block;
+    color: $color-red-3;
+    font-size: 1.2rem;
+  }
+
+  input {
+    border: 1px solid $color-red-3 !important;
+  }
+
+  textarea {
+    border: 1px solid $color-red-3 !important;
+  }
+}

@@ -1,0 +1,54 @@
+@import "~mixins/appColors.module.scss";
+
+.card {
+  position: relative;
+  width: 18em;
+  height: 40em;
+
+  img {
+    position: absolute;
+    border: 1px solid $color-gray-4;
+  }
+
+  img:nth-child(1) {
+    transform: rotate(7deg);
+    top: 0;
+    left: 100px;
+  }
+
+  img:nth-child(2) {
+    transform: rotate(-7deg);
+    top: 50px;
+    left: 0px;
+  }
+
+  img:nth-child(3) {
+    transform: rotate(4deg);
+    top: 60px;
+    left: 100px;
+  }
+
+  img:nth-child(4) {
+    transform: rotate(-3deg);
+    top: 120px;
+    left: 5px;
+  }
+
+  img:nth-child(5) {
+    transform: rotate(10deg);
+    top: 150px;
+    left: 100px;
+  }
+
+  img:nth-child(6) {
+    transform: rotate(-4deg);
+    top: 220px;
+    left: 10px;
+  }
+
+  img:nth-child(7) {
+    transform: rotate(7deg);
+    top: 280px;
+    left: 90px;
+  }
+}

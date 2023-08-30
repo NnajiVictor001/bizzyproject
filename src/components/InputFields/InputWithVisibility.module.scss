@@ -1,0 +1,18 @@
+@import "~mixins/appColors.module.scss";
+@import "~mixins/generalMixins.module.scss";
+@import "~mixins/mediaQueryManager.scss";
+
+.flex {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+
+  &__img {
+    margin-right: 1rem;
+    cursor: pointer;
+  }
+
+  &__input {
+    width: 100%;
+  }
+}

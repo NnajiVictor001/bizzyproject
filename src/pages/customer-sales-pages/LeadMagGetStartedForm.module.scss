@@ -1,0 +1,68 @@
+@import "~mixins/appColors.module.scss";
+@import "~mixins/mediaQueryManager.scss";
+
+.form {
+  background: rgba(255, 255, 255, 0.5);
+  padding: 2rem;
+  margin: 2rem;
+  position: relative;
+
+  h3 {
+    font-weight: 700;
+    font-size: 3rem;
+    line-height: 120%;
+    font-feature-settings: "salt" on, "liga" off;
+    color: $color-black-1;
+    text-align: left;
+    margin-bottom: 2rem;
+  }
+
+  &__layout {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  &__fullWidth {
+    grid-column: 1 / 3;
+  }
+
+  &__bottomCon {
+    text-align: end;
+    grid-column: 1 / 3;
+  }
+
+  &__submitBtn {
+    border-color: $color-red-3;
+    color: $color-white-1;
+  }
+
+  &__leadArrow {
+    position: absolute;
+    top: -8rem;
+    right: -5rem;
+    display: none;
+
+    @include respond(tab-port) {
+      display: none;
+    }
+  }
+
+  &__phoneInput {
+    border-radius: 1rem;
+    border: 1px solid $color-gray-6;
+    padding: 1.3rem 4rem 1.3rem 1.3rem;
+    width: 100%;
+    background: $color-white-1;
+
+    input {
+      border: none;
+      font-weight: 700;
+      font-size: 1.6rem;
+    }
+
+    input:focus-visible {
+      outline: none;
+    }
+  }
+}

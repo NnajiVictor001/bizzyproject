@@ -1,0 +1,56 @@
+@import "~mixins/appColors.module.scss";
+
+.plan {
+  border: 1px solid $color-black-1;
+  border-radius: 2.4rem;
+  padding: 4rem;
+  margin-right: 2rem;
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+
+  &__title {
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 1.8rem;
+    margin-bottom: 5rem;
+  }
+
+  &__cost {
+    text-align: center;
+    margin-bottom: 2rem;
+
+    &__price {
+      font-weight: 700;
+      font-size: 5rem;
+      color: $color-blue-2;
+    }
+
+    &__time {
+      font-weight: 700;
+      font-size: 2.4rem;
+    }
+  }
+
+  &__content {
+    margin-bottom: 4rem;
+  }
+
+  &__features {
+    list-style: none;
+  }
+
+  &__feature {
+    display: flex;
+    margin-bottom: 1rem;
+
+    &__title {
+      display: inline;
+      margin-left: 1rem;
+    }
+  }
+
+  &__btn {
+    margin-top: auto;
+  }
+}

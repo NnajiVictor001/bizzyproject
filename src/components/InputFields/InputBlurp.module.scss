@@ -1,0 +1,67 @@
+@import "~mixins/appColors.module.scss";
+
+.input_refresh_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 1.4rem;
+  width: 100%;
+  height: 6rem;
+}
+
+.input {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  &__field {
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    border: 1px solid $color-gray-6;
+    border-left: none;
+    padding: 0.9rem;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    width: 100%;
+    height: 100%;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:focus + .input__placeholder,
+    &:not(:focus):valid + .input__placeholder {
+      top: -8px;
+      color: $color-black-1;
+      font-size: 1.2rem;
+      font-weight: 500;
+    }
+  }
+
+  .picker_no_border {
+    border-radius: 1rem;
+    border-left: 1px solid $color-gray-6;
+  }
+
+  &__placeholder {
+    color: $color-gray-4;
+    pointer-events: none;
+    position: absolute;
+    top: 25%;
+    left: 5%;
+    background-color: $color-white-1;
+    border-left: 1rem solid $color-white-1;
+    border-right: 1rem solid $color-white-1;
+    transition: all 0.2s ease-in-out;
+  }
+}
+
+.pick_button_container {
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  border: 1px solid $color-gray-6;
+  padding: 0.8rem 0.8rem;
+  cursor: pointer;
+  height: 100%;
+}

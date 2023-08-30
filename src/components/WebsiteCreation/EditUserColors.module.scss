@@ -1,0 +1,26 @@
+@import "~mixins/appColors.module.scss";
+.main {
+  position: absolute;
+  z-index: 10;
+  top: 2rem;
+  left: 0;
+  background-color: $color-white-1;
+  padding: 2rem;
+  border-radius: 1rem;
+  border: 1px solid $color-black-1;
+}
+.title {
+  font-size: 1.4rem;
+  color: $color-gray-4;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__img {
+    margin-left: 5rem;
+    img {
+      width: 100%;
+    }
+  }
+}

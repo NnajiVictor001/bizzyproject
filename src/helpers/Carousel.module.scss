@@ -1,0 +1,39 @@
+@import "~mixins/appColors.module.scss";
+@import "~mixins/mediaQueryManager.scss";
+
+.prev {
+  position: absolute;
+  left: 45%;
+  top: 90.4%;
+  z-index: 1000001;
+  font-size: 3rem;
+  transform: scale(0.6, 1);
+  cursor: pointer;
+  color: $color-black-1;
+
+  // @include respond(big-desktop) {
+  //   top: 97.4%;
+  //   left: 46%;
+  // }
+}
+
+.next {
+  position: absolute;
+  left: 53%;
+  top: 90.4%;
+  z-index: 1000001;
+  font-size: 3rem;
+  transform: scale(0.6, 1);
+  cursor: pointer;
+  color: $color-black-1;
+
+  // @include respond(big-desktop) {
+  //   top: 97.4%;
+  // }
+}
+
+.custom_pagination {
+  position: absolute;
+  top: 95%;
+  left: 53%;
+}

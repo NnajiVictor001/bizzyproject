@@ -1,0 +1,42 @@
+@import "~mixins/appColors.module.scss";
+
+.textNiche {
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem !important;
+
+  &::after {
+    content: "";
+    flex: 1 1 auto;
+    border-top: 1px solid $color-gray-3;
+  }
+}
+
+.textTopic {
+  font-size: 1.6rem !important;
+  background-color: $color-white-1 !important;
+
+  &__span {
+    font-size: 1.6rem !important;
+    color: $color-gray-4;
+    font-family: "Plus Jakarta Sans", sans-serif;
+  }
+
+  &__inputLabel {
+    font-size: 1.6rem !important;
+    color: $color-black-1;
+    font-family: "Plus Jakarta Sans", sans-serif;
+  }
+
+  &__label {
+    font-family: "Plus Jakarta Sans", sans-serif;
+  }
+
+  &__select {
+    font-size: 1.6rem !important;
+    border-radius: 1rem;
+    color: $color-gray-4;
+    font-weight: 700;
+    font-family: "Plus Jakarta Sans", sans-serif;
+  }
+}

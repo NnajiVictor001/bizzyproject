@@ -1,0 +1,25 @@
+@import "~mixins/generalMixins.module.scss";
+@import "~mixins/appColors.module.scss";
+@import "~mixins/mediaQueryManager.scss";
+
+.container {
+  @include container;
+  display: flex;
+  align-items: flex-start;
+
+  @include respond(tab-port) {
+    flex-wrap: wrap;
+  }
+
+  @include respond(tab-land) {
+    padding: 2rem 8rem;
+  }
+
+  @include respond(big-phone) {
+    padding: 2rem 3rem;
+  }
+
+  @include respond(small-phone) {
+    padding: 2rem 1rem;
+  }
+}

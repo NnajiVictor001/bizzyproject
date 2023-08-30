@@ -1,0 +1,31 @@
+.loader {
+  &__top {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1.3rem 1.1rem;
+    cursor: pointer;
+  }
+
+  &__bottom {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 1.3rem 1.1rem;
+    cursor: pointer;
+  }
+
+  &__spin {
+    animation: rotation 0.5s infinite linear;
+  }
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(359deg);
+  }
+}

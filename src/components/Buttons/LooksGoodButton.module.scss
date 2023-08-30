@@ -1,0 +1,30 @@
+@import "~mixins/appColors.module.scss";
+
+.buttonGood {
+  display: flex;
+  margin-left: 1rem;
+  justify-content: center;
+  align-items: center;
+
+  &__input {
+    zoom: 2;
+    accent-color: $color-orange-2;
+  }
+
+  &__label {
+    font-size: 1.4rem;
+    margin-left: 1rem;
+    cursor: pointer;
+    transition: all 0.2s;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  &__span {
+    font-size: 1.4rem;
+    font-weight: 800;
+    display: block;
+  }
+}

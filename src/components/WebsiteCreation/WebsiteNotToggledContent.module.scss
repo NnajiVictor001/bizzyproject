@@ -1,0 +1,340 @@
+@import "~mixins/appColors.module.scss";
+@import "~mixins/generalMixins.module.scss";
+@import "~mixins/mediaQueryManager.scss";
+
+.card {
+  &__topRow {
+    display: grid;
+    // justify-content: space-between;
+    grid-template-columns: 65% 1fr;
+
+    @include respond(tab-land) {
+      grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+      row-gap: 2rem;
+    }
+  }
+
+  &__left {
+    padding-right: 3rem;
+
+    &__title {
+      display: flex;
+      justify-content: space-between;
+      font-size: 1.4rem;
+      color: $color-gray-4;
+    }
+  }
+
+  &__valueBoxes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr));
+    gap: 1.6rem;
+
+    &__valueBox {
+      font-size: 1.2rem;
+      border: 1px solid $color-gray-6;
+      padding: 1rem 1.5rem;
+      border-radius: 1rem;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.2s;
+
+      &:hover {
+        color: darken($color-gray-6, 30%);
+      }
+
+      &__input {
+        border-radius: 1rem;
+        outline: none;
+        border: 1px solid $color-gray-6;
+        padding: 7px;
+        font-weight: 700;
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+        color: $color-gray-4;
+        width: 100%;
+      }
+    }
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: -3.9rem;
+    border-left: 1px solid $color-gray-6;
+
+    @include respond(tab-land) {
+      margin-top: 0;
+    }
+
+    &__header {
+      font-size: 1.4rem;
+      color: $color-gray-4;
+      margin-bottom: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      &__img {
+        margin-left: 5rem;
+
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  &__divider {
+    margin: 2.9rem 0 4.1rem;
+    border-top: 1px solid $color-gray-6;
+  }
+
+  &__input {
+    font-size: 1.4rem;
+    margin-bottom: 3rem;
+    font-weight: 400;
+    font-family: "Plus Jakarta Sans", sans-serif;
+  }
+
+  &__inputPlaceholder {
+    font-size: 1.4rem;
+    left: 1rem;
+  }
+
+  &__inputsContainer {
+    margin-right: 2rem;
+  }
+
+  &__inputsPadding {
+    margin: 1.7rem 2rem 0 3rem;
+  }
+
+  &__textBoxInputContainer {
+    margin: 1.8rem 2rem 0 3rem;
+  }
+
+  &__textBoxInput {
+    resize: none;
+    font-size: 1.4rem;
+  }
+
+  &__shortBlurTxtArea {
+    margin-top: 2.5rem;
+  }
+
+  &__textAreaPlaceholder {
+    font-size: 1.4rem;
+    top: 2rem;
+    left: 1rem;
+  }
+
+  &__textAreaInput {
+    font-size: 1.4rem;
+    min-height: 12rem;
+    margin-bottom: 2rem;
+    resize: none;
+  }
+
+  &__uploadFileContainer {
+    margin-left: 3.1rem;
+    padding: 10px;
+    border: 1px dashed #dfdfdf;
+    border-radius: 1rem;
+    position: relative;
+
+    & input::-webkit-file-upload-button {
+      display: none;
+    }
+
+    & img {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      cursor: pointer;
+    }
+  }
+
+  &__chooseFileContainer {
+    margin-bottom: 2.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+
+    & label {
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: $color-black-1;
+      display: block;
+    }
+  }
+
+  &__dropZone {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+  }
+
+  &__dragLinkText {
+    color: #757575 !important;
+    font-size: 1.6rem !important;
+    font-weight: 500 !important;
+
+    span {
+      color: $color-blue-1;
+      cursor: pointer;
+      text-decoration: underline;
+    }
+  }
+
+  &__nextContainer {
+    margin-top: 4rem;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__nextTxtContainer {
+    display: flex;
+  }
+
+  &__greatTxt {
+    font-size: 1.4rem;
+  }
+
+  &__nextTxt {
+    font-size: 1.4rem;
+    font-weight: 800;
+  }
+
+  &__doubleArrowIcon {
+    margin-left: 6px;
+  }
+
+  &__checkbox {
+    width: 3rem;
+    height: 3rem;
+    margin-top: 3px;
+    display: flex;
+    justify-content: center;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 9px;
+      top: 3px;
+      width: 9px;
+      height: 1.7rem;
+      border: solid $color-black-1;
+      border-width: 0 2px 2px 0;
+    }
+  }
+
+  &__textContainer {
+    display: flex;
+    flex-direction: column;
+    margin-left: 1rem;
+  }
+
+  &__colorBoxesCont {
+    margin-top: 1.8rem;
+
+    & div {
+      width: 3.3rem;
+      height: 2.8rem;
+    }
+  }
+
+  &__header {
+    font-size: 1.4rem;
+    color: $color-gray-4;
+    padding-left: 2rem;
+    margin-bottom: 1rem;
+  }
+}
+
+.selectedItem {
+  border: 1px solid $color-yellow-1;
+}
+
+.flex {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-evenly;
+
+  h3 {
+    margin-bottom: 5px;
+  }
+
+  & div:nth-child(2) div {
+    margin-top: 0;
+  }
+}
+
+.marBottom {
+  margin-bottom: 3rem;
+}
+
+.normalInputText {
+  margin-bottom: 3rem;
+
+  & strong {
+    font-weight: 400;
+  }
+}
+
+.warning {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "This input can not be empty";
+    display: inline-block;
+    color: $color-red-3;
+    margin-top: -2.8rem;
+    font-size: 1.2rem;
+  }
+
+  input {
+    border: 1px solid $color-red-3 !important;
+  }
+
+  textarea {
+    border: 1px solid $color-red-3 !important;
+  }
+}
+
+.warning_col {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "This input can not be empty";
+    display: inline-block;
+    color: $color-red-3;
+    margin-top: -1.8rem;
+    font-size: 1.2rem;
+  }
+
+  input {
+    border: 1px solid $color-red-3 !important;
+  }
+}
+
+.warning_cont {
+  position: relative;
+
+  &>div {
+    border: 1px solid $color-red-3 !important;
+  }
+
+  &::after {
+    position: absolute;
+    content: "This input can not be empty";
+    display: inline-block;
+    color: $color-red-3;
+    margin-top: -2.8rem;
+    font-size: 1.2rem;
+  }
+}

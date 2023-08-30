@@ -1,0 +1,62 @@
+@import "~mixins/appColors.module.scss";
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid $color-gray-6;
+  border-radius: 1rem;
+  padding: 8px 0.5rem;
+  position: relative;
+  font-size: 1.4rem;
+
+  &__inputs {
+    display: flex;
+    flex-direction: column;
+    max-width: 90%;
+    flex: 0.9
+  }
+
+  &__refresh {
+    width: 2.5rem;
+    cursor: pointer;
+  }
+
+  &__placeholder {
+    font-size: 1.2rem;
+    font-weight: 400;
+    position: absolute;
+    top: -8px;
+    left: 1rem;
+    background-color: $color-white-1;
+    border-left: 1rem solid $color-white-1;
+    border-right: 1rem solid $color-white-1;
+    pointer-events: none;
+  }
+
+  &__lower {
+    border: none;
+    height: 2rem;
+    margin-left: 1.5rem;
+    gap: 2px;
+  }
+
+  &__lower:focus {
+    outline: none;
+  }
+
+  textarea {
+    border: none;
+    margin-left: 1.5rem;
+    gap: 2px;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .container_refresh {
+    display: flex;
+    justify-content: center;
+    flex: 0.1
+  }
+}

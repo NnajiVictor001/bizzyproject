@@ -1,0 +1,35 @@
+.main {
+  width: 100%;
+
+  &__con {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+    grid-gap: 1rem;
+    margin-top: 10rem;
+
+    &__img {
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  &__right {
+    padding: 2rem;
+
+    &__top {
+      font-weight: 600;
+      font-size: 2rem;
+      line-height: 150%;
+      // color: #18191f;
+    }
+
+    &__middle {
+      font-weight: 400;
+      font-size: 1.6rem;
+      line-height: 150%;
+      // color: #6d7280;
+      margin: 2rem 0 3rem;
+    }
+  }
+}

@@ -1,0 +1,39 @@
+@import "~mixins/appColors.module.scss";
+
+.plan {
+  border: 1px solid $color-gray-6;
+  border-radius: 1rem;
+  border-top: 1rem solid $color-orange-1;
+  padding: 2rem;
+
+  &__title {
+    font-family: "Quicksand", sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  &__change {
+    font-family: "Nunito", sans-serif;
+    font-weight: 700;
+    color: $color-yellow-1;
+  }
+
+  &__cost {
+    font-family: "Nunito", sans-serif;
+    font-weight: 700;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+  }
+
+  &__description {
+    font-family: "Nunito", sans-serif;
+    font-weight: 500;
+  }
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

@@ -1,0 +1,65 @@
+@import "~mixins/appColors.module.scss";
+@import "~mixins/mediaQueryManager.scss";
+
+.main {
+  position: relative;
+  height: 20em;
+  width: 100%;
+
+  img {
+    width: 160px;
+    position: absolute;
+    border: 1px solid $color-gray-4;
+  }
+
+  img:nth-child(1) {
+    transform: rotate(7deg);
+    top: 0;
+    left: 7%;
+  }
+
+  img:nth-child(2) {
+    transform: rotate(-7deg);
+    left: 17%;
+  }
+
+  img:nth-child(3) {
+    transform: rotate(4deg);
+    left: 30%;
+  }
+
+  img:nth-child(4) {
+    transform: rotate(-3deg);
+    left: 41%;
+  }
+
+  img:nth-child(5) {
+    transform: rotate(10deg);
+    left: 51%;
+  }
+
+  img:nth-child(6) {
+    transform: rotate(-4deg);
+    left: 61%;
+  }
+
+  img:nth-child(7) {
+    transform: rotate(4deg);
+    left: 71%;
+  }
+
+  @include respond(lap) {
+    img {
+      width: 170px;
+    }
+    img:nth-child(1) {
+      top: 0;
+      left: 0;
+    }
+  }
+  @include respond(big-desktop) {
+    img {
+      width: 200px;
+    }
+  }
+}

@@ -1,0 +1,26 @@
+@import "~mixins/appColors.module.scss";
+
+.main {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  &:not(:first-child) {
+    margin-top: 5rem;
+  }
+
+  h3 {
+    font-weight: 600;
+    font-size: 3rem;
+    line-height: 150%;
+    // color: $color-gray-14;
+    margin-bottom: 1.3rem;
+  }
+
+  p {
+    font-weight: 400;
+    font-size: 1.3rem;
+    line-height: 150%;
+    // color: $color-gray-13;
+    padding-right: 5rem;
+  }
+}

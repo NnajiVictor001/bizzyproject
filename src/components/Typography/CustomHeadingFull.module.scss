@@ -1,0 +1,52 @@
+@import "~mixins/appColors.module.scss";
+@import "~mixins/mediaQueryManager.scss";
+
+.heading {
+  text-align: center;
+  margin-top: 2rem;
+
+  @include respond(lap) {
+    margin-right: 2rem;
+    margin-left: 2rem;
+  }
+
+  &__sub_header {
+    font-weight: 400;
+    font-size: 2.4rem;
+    line-height: 2.9rem;
+    text-align: center;
+    color: $color-gray-13;
+    // padding: 0 2rem;
+    margin-top: 2rem;
+
+    @include respond(tab-port) {
+      font-size: 2rem;
+    }
+
+    @include respond(big-phone) {
+      font-size: 2rem;
+    }
+  }
+
+  &__body {
+    font-weight: 700;
+    font-size: 4.8rem;
+    line-height: 140%;
+    letter-spacing: -1px;
+    color: $color-blue-2;
+    margin-top: 1.6rem;
+    font-family: 'Open Sans';
+
+    @include respond(tab-port) {
+      font-size: 3.8rem;
+    }
+
+    @include respond(big-phone) {
+      font-size: 3rem;
+    }
+  }
+
+  &__toolkit {
+    color: $color-yellow-1;
+  }
+}

@@ -1,0 +1,86 @@
+@import "~mixins/appColors.module.scss";
+@import "~mixins/generalMixins.module.scss";
+@import "~mixins/mediaQueryManager.scss";
+
+.main {
+  padding: 6rem 5rem;
+  background: $color-blue-5;
+
+  @include respond(tab-land) {
+    padding: 5rem 8rem;
+  }
+
+  @include respond(tab-land) {
+    padding: 3rem 4rem;
+  }
+
+  &__top_container {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+
+    @include respond(big-phone) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+
+  &__top_txt {
+    font-weight: 700;
+    font-size: 3rem;
+    line-height: 120%;
+    font-feature-settings: "salt" on, "liga" off;
+    // color: $color-black-3;
+
+    @include respond(tab-land) {
+      font-size: 2rem;
+    }
+
+    @include respond(tab-port) {
+      font-size: 2.8rem;
+    }
+
+    @include respond(big-phone) {
+      flex: auto;
+      font-size: 2.5rem;
+    }
+  }
+
+  &__button {
+    background: $color-red-3;
+    border-radius: 4rem;
+    transition: all 0.2s;
+    cursor: pointer;
+    margin-top: 3rem;
+    width: fit-content;
+    text-align: center;
+
+    @include respond(big-phone) {
+      flex: none;
+    }
+
+    &:hover {
+      @include hover;
+    }
+  }
+
+  &__button_txt {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: $color-white-1;
+    padding: 1.5rem 3rem;
+  }
+
+  &__bottom_container {
+    display: flex;
+    align-items: center;
+    margin-top: 3rem;
+    gap: 2rem;
+
+    @include respond(big-phone) {
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+    }
+  }
+}

@@ -1,0 +1,29 @@
+@import "~mixins/appColors.module.scss";
+@import "~mixins/mediaQueryManager.scss";
+
+.main__third {
+  margin-top: 15rem;
+
+  @include respond(tab-port) {
+    padding: 5rem 4rem;
+  }
+
+  @include respond(big-phone) {
+    padding: 5rem 3rem;
+  }
+
+  h3 {
+    font-weight: 600;
+    font-size: 2rem;
+    line-height: 150%;
+    // color: $color-black-3;
+  }
+
+  p {
+    margin-top: 2rem;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 150%;
+    // color: $color-gray-13;
+  }
+}

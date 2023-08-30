@@ -1,0 +1,35 @@
+@import "~mixins/appColors.module.scss";
+
+.pallete {
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+
+  &__item {
+    width: 100%;
+    align-items: center;
+    display: flex;
+    border: 3px solid transparent;
+  }
+}
+
+.color_chip {
+  width: 3.7rem;
+  height: 2.8rem;
+  outline: $color-gray-4 0.5px solid;
+
+  &:first-child {
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+  }
+
+  &:last-child {
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+  }
+}
+
+.select_chip {
+  border: 5px solid $color-orange-2 !important;
+  border-radius: 1.5rem;
+}

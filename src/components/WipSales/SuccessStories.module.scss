@@ -1,0 +1,114 @@
+@import "~mixins/appColors.module.scss";
+@import "~mixins/mediaQueryManager.scss";
+
+.main {
+  padding: 13rem 0rem 4rem;
+  background-color: $color-yellow-4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 3rem;
+  flex-wrap: wrap;
+
+  &__card {
+    padding: 3.2rem;
+    background: $color-white-1;
+    box-shadow: 0px 1rem 2rem rgba(41, 41, 42, 0.07);
+    border-radius: 8px;
+  }
+
+  &__textCont {
+    padding-left: 3.2rem;
+    margin-top: 3rem;
+  }
+
+  &__author {
+    margin-top: 2rem;
+    font-weight: 700;
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+  }
+  &__position {
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+    color: $color-gray-11;
+  }
+  &__feedback {
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 3.2rem;
+    color: $color-black-3;
+  }
+  &__hubspotCard {
+    width: 35rem;
+    margin-top: 7.2rem;
+
+    @include respond(tab-port) {
+      width: 90%;
+    }
+  }
+  &__airbnbCard {
+    width: 44.5rem;
+
+    @include respond(tab-port) {
+      width: 90%;
+    }
+  }
+  &__bookMyShowCard {
+    width: 35rem;
+    margin-top: 3.2rem;
+
+    @include respond(tab-port) {
+      width: 90%;
+    }
+  }
+  &__left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: relative;
+
+    @include respond(tab-port) {
+      align-items: center;
+    }
+  }
+
+  &__right {
+    @include respond(tab-port) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 3.2rem;
+    }
+  }
+
+  &__leftTop {
+    position: relative;
+    z-index: 2;
+
+    &::before {
+      content: "\201c";
+      color: rgba(255, 255, 255, 0.3);
+      font-size: 40rem;
+      position: absolute;
+      line-height: 45%;
+      left: -10rem;
+    }
+  }
+  &__bg {
+    position: absolute;
+    z-index: 0;
+    left: -10rem;
+    top: -6rem;
+    opacity: 0.5;
+  }
+  &__leftText {
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 150%;
+    color: $color-black-3;
+    margin-top: 7px;
+    padding-right: 1rem;
+  }
+}

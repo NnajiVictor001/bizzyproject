@@ -1,0 +1,48 @@
+@import "~mixins/appColors.module.scss";
+@import "~mixins/mediaQueryManager.scss";
+
+.main {
+  background: rgba(255, 255, 255, 0.75);
+  padding: 4rem 2rem;
+  position: relative;
+
+  &__icon {
+    position: absolute;
+    top: -2rem;
+    left: 1rem;
+
+    img {
+      width: 6rem;
+      border-radius: 50%;
+      background: linear-gradient(0deg, $color-white-1, $color-white-1),
+        $color-white-1;
+      padding: 1.3rem;
+    }
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 2.8rem;
+    color: $color-black-4;
+    margin-top: 2rem;
+
+    @include respond(tab-land) {
+      font-size: 1.6rem;
+    }
+  }
+
+  &__content {
+    font-weight: 400;
+    font-size: 1.1rem;
+    line-height: 2.8rem;
+    color: $color-black-1;
+    mix-blend-mode: normal;
+    opacity: 0.6;
+    margin-top: 1rem;
+
+    @include respond(tab-land) {
+      font-size: 1.2rem;
+    }
+  }
+}

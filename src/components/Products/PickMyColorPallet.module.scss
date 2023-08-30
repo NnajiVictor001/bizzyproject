@@ -1,0 +1,163 @@
+@import "~mixins/appColors.module.scss";
+
+.title {
+  font-family: "Plus Jakarta Sans";
+  font-weight: 700;
+  font-size: 1.8rem;
+  line-height: 2.3rem;
+  color: $color-gray-4;
+
+  &__back {
+    font-weight: 700;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    color: $color-gray-4;
+    cursor: pointer;
+    transition: all 0.2s;
+
+    &:hover {
+      color: darken($color-gray-4, 30%);
+    }
+  }
+}
+
+.picker_container {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  margin-right: 2rem;
+  grid-column-gap: 2rem;
+  margin-top: 2.5rem;
+
+  .picker_color_left {
+    flex: 0 0 50%;
+    margin-right: 4rem;
+
+    &__chrome_picker {
+      width: 100% !important;
+    }
+  }
+
+  .picker_color_right {
+    display: flex;
+    flex-direction: column;
+    margin-right: 0.5rem;
+
+    &__upper_con {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(5.7rem, 5.7rem));
+      grid-auto-rows: 5.2rem;
+      column-gap: 1.3rem;
+      row-gap: 1.7rem;
+      margin-right: 6rem;
+      margin-left: 4rem;
+
+      &__item {
+        cursor: pointer;
+
+        &__plus {
+          color: $color-gray-9;
+          font-size: 3.3rem;
+          text-align: center;
+        }
+      }
+    }
+
+    &__select_container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 1rem;
+      border-radius: 1rem;
+      margin-right: 6.4rem;
+      margin-left: 5rem;
+
+      &__item {
+        flex-grow: 1;
+        height: 2.88rem;
+        min-width: 1.5rem;
+        cursor: pointer;
+
+        &:first-child {
+          border-top-left-radius: 1rem;
+          border-bottom-left-radius: 1rem;
+        }
+
+        &:last-child {
+          border-top-right-radius: 1rem;
+          border-bottom-right-radius: 1rem;
+        }
+      }
+    }
+  }
+
+  .add_color_btn {
+    margin-top: 2.6rem;
+    font-weight: 700;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    color: $color-black-1;
+    cursor: pointer;
+    transition: all 0.2s;
+
+    &:hover {
+      color: lighten($color-black-1, 30%);
+    }
+  }
+
+  .edit_btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2.6rem;
+    cursor: pointer;
+
+    &__txt {
+      width: 12.2rem;
+      margin-left: 0.5rem;
+      font-weight: 700;
+      font-size: 1.4rem;
+      line-height: 1.8rem;
+      color: $color-gray-4;
+      border: none;
+
+      &:focus {
+        outline: 1px solid $color-black-1;
+        border-radius: 5px;
+        padding: 5px;
+      }
+    }
+  }
+
+  .check_con {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 8rem;
+
+    &__input {
+      padding: 1rem;
+    }
+  }
+}
+
+.error {
+  color: red;
+}
+
+.flexBetween {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 2.5rem;
+}
+
+.unselected_item {
+  border: 1px solid $color-gray-8;
+  border-radius: 1rem;
+}
+
+.selected_item {
+  border: 4px solid $color-orange-2;
+  border-radius: 1rem;
+  // transform: matrix(-1, 0, 0, 1, 0, 0);
+  scale: 1.1;
+}

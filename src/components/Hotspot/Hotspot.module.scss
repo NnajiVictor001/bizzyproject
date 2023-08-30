@@ -1,0 +1,244 @@
+@import "~mixins/appColors.module.scss";
+@import "~mixins/mediaQueryManager.scss";
+
+.container {
+  position: absolute;
+}
+
+.hotspot {
+  position: absolute;
+
+  &__img {
+    position: relative;
+    width: 4rem !important;
+    cursor: pointer;
+  }
+
+  &__product {
+    z-index: 1001;
+    top: 12%;
+    left: 5%;
+
+    @include respond(tab-land) {
+      top: 8%;
+    }
+    &__span {
+      top: 30%;
+      left: -6%;
+    }
+  }
+
+  &__list {
+    z-index: 1001;
+    top: 7%;
+    right: 9.5%;
+
+    @include respond(tab-land) {
+      top: 4%;
+    }
+
+    @include respond(tab-port) {
+      right: 11.5%;
+    }
+
+    @include respond(big-phone) {
+      right: 6.5%;
+    }
+
+    @include respond(small-phone) {
+      right: 10%;
+      top: 6%;
+    }
+
+    &__span {
+      top: -25%;
+      right: 15%;
+    }
+  }
+
+  &__profile {
+    z-index: 1001;
+    top: 7%;
+    right: 1.5%;
+
+    @include respond(tab-land) {
+      top: 4%;
+    }
+
+    @include respond(tab-port) {
+      right: 2.5%;
+    }
+
+    @include respond(big-phone) {
+      right: 1.5%;
+    }
+
+    @include respond(small-phone) {
+      top: 6%;
+    }
+
+    &__span {
+      top: -25%;
+      right: 15%;
+
+      @include respond(big-phone) {
+        right: -3%;
+      }
+    }
+  }
+
+  &__help {
+    z-index: 1001;
+    top: 36%;
+    right: 1%;
+
+    @include respond(tab-land) {
+      top: 44%;
+    }
+    &__span {
+      top: 27%;
+      right: -4%;
+    }
+  }
+
+  &__video {
+    z-index: 1001;
+    top: 0%;
+    left: 12%;
+
+    @include respond(tab-land) {
+      top: -55%;
+    }
+
+    @include respond(tab-port) {
+      top: -60%;
+      left: 0;
+    }
+
+    @include respond(big-phone) {
+      top: -60%;
+    }
+
+    @include respond(small-phone) {
+      top: 0;
+    }
+    &__span {
+      top: 80%;
+      left: 44%;
+    }
+  }
+
+  &__stat {
+    z-index: 1001;
+    top: -25%;
+    left: 5%;
+
+    @include respond(tab-port) {
+      top: -50%;
+      left: 0;
+    }
+    &__span {
+      top: 80%;
+      left: 44%;
+    }
+  }
+
+  &__started {
+    z-index: 1001;
+    top: 5%;
+    left: 5%;
+
+    @include respond(tab-land) {
+      top: 0%;
+      left: -2%;
+    }
+
+    @include respond(tab-port) {
+      top: -40%;
+      left: 2%;
+    }
+
+    @include respond(small-phone) {
+      top: -6%;
+    }
+    &__span {
+      top: 80%;
+      left: 44%;
+    }
+  }
+}
+
+.rotate {
+  &__left {
+    transition: all 0.2s;
+    rotate: 90deg;
+
+    & + .popup {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  &__right {
+    transition: all 0.2s;
+    rotate: -90deg;
+
+    & + .popup {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  &__top {
+    transition: all 0.2s;
+    rotate: 180deg;
+
+    & + .popup {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  &__bottom {
+    & + .popup {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}
+
+.popup {
+  border: 1px solid $color-black-1;
+  border-radius: 1rem;
+  padding: 1.5rem 3rem 3rem;
+  max-width: 33rem;
+  background-color: $color-white-1;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1002;
+
+  @include respond(big-phone) {
+    padding: 1.5rem;
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 8px;
+    color: $color-yellow-5;
+    margin-bottom: 5px;
+  }
+
+  &__subTitle {
+    font-weight: 800;
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  &__content {
+    font-weight: 400;
+    font-size: 1rem;
+    color: $color-gray-3;
+    text-align: center;
+  }
+}

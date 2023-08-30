@@ -1,0 +1,72 @@
+@import "~mixins/appColors.module.scss";
+@import "~mixins/mediaQueryManager.scss";
+
+.main {
+  height: 100vh;
+  position: relative;
+
+  @include respond(small-phone) {
+    height: 30vh;
+  }
+
+  &__bg {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    z-index: -1;
+  }
+  &__content {
+    padding-top: 13rem;
+    text-align: center;
+
+    @include respond(big-desktop) {
+      padding-top: 20rem;
+    }
+
+    @include respond(big-phone) {
+      padding-top: 3rem;
+    }
+  }
+  &__details {
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 150%;
+    margin-top: 1.2rem;
+  }
+  &__btns {
+    margin-top: 5rem;
+  }
+  &__btn1 {
+    border-radius: 0;
+    margin-right: 3rem;
+    padding: 1.5rem 5rem;
+    border: 1px solid $color-black-1;
+  }
+  &__btn2 {
+    border-radius: 0;
+    padding: 1.5rem 5rem;
+    border: 1px solid $color-white-1;
+  }
+  &__btn1Text {
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+    text-align: center;
+    color: $color-black-1;
+  }
+  &__btn2Text {
+    font-weight: 800;
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+    text-align: center;
+  }
+  &__imgCont {
+    display: flex;
+    justify-content: center;
+    margin: 3rem 20rem 0;
+
+    & img {
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,42 @@
+@import "~mixins/appColors.module.scss";
+@import "~mixins/mediaQueryManager.scss";
+
+.main {
+  flex: 30%;
+  // text-align: center;
+
+  h3 {
+    font-weight: 800;
+    font-size: 4rem;
+    line-height: 5.2rem;
+    letter-spacing: 0.2px;
+    color: $color-black-4;
+
+    @include respond(tab-land) {
+      font-size: 2.8rem;
+    }
+
+    @include respond(big-phone) {
+      font-size: 3rem;
+    }
+  }
+
+  p {
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 3rem;
+    letter-spacing: 0.2px;
+    color: $color-black-1;
+    mix-blend-mode: normal;
+    opacity: 0.6;
+    margin-top: 2rem;
+
+    @include respond(tab-land) {
+      font-size: 1.6rem;
+    }
+
+    @include respond(big-phone) {
+      font-size: 1.6rem;
+    }
+  }
+}

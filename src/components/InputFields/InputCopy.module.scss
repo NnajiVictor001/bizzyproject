@@ -1,0 +1,65 @@
+@import "~mixins/appColors.module.scss";
+
+.input {
+  position: relative;
+
+  &__field {
+    // border-radius: 1rem;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    border: 1px solid $color-gray-6;
+    padding: 1.4rem;
+    width: 100%;
+    font-weight: 700;
+    font-size: 1.6rem;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:focus + .input__placeholder,
+    &:not(:focus):valid + .input__placeholder {
+      top: -8px;
+      color: $color-black-1;
+      font-size: 1.2rem;
+      font-weight: 500;
+    }
+  }
+
+  &__placeholder {
+    color: $color-gray-4;
+    pointer-events: none;
+    position: absolute;
+    top: 25%;
+    left: 5%;
+    background-color: $color-white-1;
+    border-left: 1rem solid $color-white-1;
+    border-right: 1rem solid $color-white-1;
+    transition: all 0.2s ease-in-out;
+  }
+}
+
+.input_copy_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.copy_button_container {
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  border: 1px solid #dfdfdf;
+  padding: 1.3rem 1.1rem;
+  cursor: pointer;
+
+  button {
+    border: none;
+    background: transparent;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.6rem;
+    line-height: 20px;
+    color: #000000;
+    cursor: pointer;
+  }
+}

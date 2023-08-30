@@ -1,0 +1,100 @@
+@import "~mixins/generalMixins.module.scss";
+@import "~mixins/appColors.module.scss";
+
+.form {
+  padding: 2rem 2.8rem 2rem 5rem;
+  background: $color-white-1;
+  border: 1px solid $color-black-1;
+  border-top: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-bottom-right-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+
+  &__container {
+    height: 34rem;
+    overflow: auto;
+    padding: 0.5rem 2rem 0 0;
+    margin-bottom: 2rem;
+
+    @include scrollBar;
+  }
+
+  &__row {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-bottom: 3.2rem;
+
+    &__headline8 {
+      width: 12.5% !important;
+    }
+
+    &__headline4 {
+      width: 25% !important;
+    }
+
+    &__headline3 {
+      width: 34% !important;
+    }
+
+    &__headline2 {
+      width: 50% !important;
+    }
+
+    &__headline1 {
+      width: 100% !important;
+    }
+
+    &__blurp100 {
+      height: 6.1rem !important;
+    }
+
+    &__blurp200 {
+      height: 10.4rem !important;
+    }
+
+    &__blurp525 {
+      height: 16.5rem !important;
+    }
+
+    &__blurp_no_limit {
+      height: 32.5rem !important;
+    }
+
+    &__paragraphShort {
+      width: 25% !important;
+      height: 11.8rem !important;
+    }
+
+    &__paragraphMiddle {
+      width: 34% !important;
+      height: 11.8rem !important;
+    }
+
+    &__paragraphBig {
+      width: 100% !important;
+      height: 11.8rem !important;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    grid-column: 1/3;
+    padding-right: 3rem;
+
+    &__refresh_btn {
+      background: $color-orange-2;
+      box-shadow: 0px 2px 4px $color-gray-12;
+      border-radius: 10px;
+      padding: 1rem 2rem;
+      border-color: transparent;
+    }
+  }
+}
+
+.customColorBackg {
+  width: 5.3rem !important;
+  height: 4.9rem !important;
+}

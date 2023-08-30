@@ -1,0 +1,35 @@
+@import "~mixins/appColors.module.scss";
+
+.container_outer {
+  display: block;
+  flex-grow: 1;
+  margin: 0 0.5rem;
+}
+
+.container {
+  padding: 3px;
+  border: 1px solid $color-gray-8;
+  border-radius: 0.5rem;
+
+  &__inner {
+    display: flex;
+
+    &__left {
+      flex-grow: 5;
+      height: 2.5rem;
+      margin: 0.2rem;
+    }
+    &__right {
+      flex-grow: 1;
+      height: 2.5rem;
+      margin: 0.2rem;
+    }
+  }
+}
+
+.example_txt {
+  font-weight: 400;
+  font-size: 1rem;
+  margin-top: 0.2rem;
+  color: $color-gray-7;
+}

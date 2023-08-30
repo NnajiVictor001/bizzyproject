@@ -1,0 +1,35 @@
+@import "~mixins/appColors.module.scss";
+
+.colorInput {
+  &__inputContainer {
+    display: flex;
+    align-items: center;
+    margin-top: 1.5rem;
+  }
+  &__eyeIcon {
+    margin-right: 6.75px;
+  }
+  &__inputColor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem 0rem 0rem 1rem;
+    padding: 1.5rem 7px 1.5rem 1rem;
+  }
+  &__inputWidth{
+    width: 100%;
+  }
+  &__inputPlaceholder{
+    left: 1rem;
+    font-size: 1.4rem;
+  }
+  &__input{
+    width: 100%;
+    border-left: none;
+    border-top-left-radius: 0; 
+    border-bottom-left-radius: 0;  
+    font-size: 1.4rem;
+    padding: 12px 11px 10px 0px;
+    padding-left: 1rem;
+}
+}

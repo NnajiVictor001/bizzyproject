@@ -1,0 +1,75 @@
+@import "~mixins/appColors.module.scss";
+@import "~mixins/mediaQueryManager.scss";
+
+.main {
+  margin: 8rem 12rem;
+  display: flex;
+  align-items: center;
+  column-gap: 3.8rem;
+
+  @include respond(tab-port) {
+    margin: 8rem 4rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  &__imgCont {
+    flex: 0 0 50%;
+  }
+
+  &__img {
+    width: 100%;
+  }
+  &__content {
+    text-transform: capitalize;
+
+    @include respond(tab-port) {
+      text-align: center;
+    }
+  }
+  &__colorText {
+    text-transform: uppercase;
+    color: $color-red-2;
+  }
+  &__text {
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 2.8rem;
+    margin-top: 3.2rem;
+    color: $color-gray-4;
+    text-transform: capitalize;
+    width: 90%;
+  }
+  &__list {
+    margin-top: 3rem;
+  }
+  &__listItem {
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 2.8rem;
+    color: $color-gray-4;
+    text-transform: capitalize;
+    margin-left: 2rem;
+  }
+  &__link {
+    margin-top: 3rem;
+    & a {
+      text-decoration: none;
+      font-weight: 900;
+      font-size: 1.6rem;
+      line-height: 1.9rem;
+      color: $color-yellow-1;
+
+      & span {
+        display: flex;
+        align-items: center;
+        column-gap: 2rem;
+        transition: all 0.2s;
+
+        &:hover {
+          color: darken($color-yellow-1, 15%);
+        }
+      }
+    }
+  }
+}

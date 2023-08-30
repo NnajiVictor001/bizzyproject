@@ -1,0 +1,70 @@
+@import "~mixins/appColors.module.scss";
+@import "~mixins/mediaQueryManager.scss";
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main {
+  padding: 4rem 22rem;
+  background: $color-blue-6;
+
+  @include respond(tab-land) {
+    padding: 4rem 14.7rem;
+  }
+
+  @include respond(big-phone) {
+    padding: 4rem 15rem;
+  }
+
+  @include respond(small-phone) {
+    padding: 4rem 8rem;
+  }
+
+  &__img {
+    text-align: center;
+
+    @include respond(small-phone) {
+      img {
+        width: 20%;
+      }
+    }
+  }
+
+  h1 {
+    margin-top: 2rem;
+    font-weight: 800;
+    font-size: 4.4rem;
+    line-height: 6rem;
+    text-align: center;
+    color: $color-black-7;
+
+    @include respond(big-phone) {
+      font-size: 3.2rem;
+    }
+
+    @include respond(small-phone) {
+      font-size: 2.4rem;
+    }
+  }
+
+  p {
+    margin-top: 2rem;
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 2.6rem;
+    text-align: center;
+    color: $color-gray-18;
+    max-width: 61.2rem;
+
+    @include respond(tab-port) {
+      margin: 3rem 0;
+    }
+
+    @include respond(small-phone) {
+      margin: 1rem 0;
+    }
+  }
+}

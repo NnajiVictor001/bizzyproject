@@ -1,0 +1,18 @@
+@import "~mixins/appColors.module.scss";
+
+.main {
+  padding: 10.6rem 0rem 5.5rem 0rem;
+  background-color: $color-yellow-4;
+  text-align: center;
+  & h1 {
+    font-weight: 800;
+    font-size: 6.4rem;
+    line-height: 120%;
+    margin-top: 1.6rem;
+  }
+  & p {
+    font-weight: 700;
+    font-size: 1.6rem;
+    line-height: 2rem;
+  }
+}
